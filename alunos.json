@@ -1,0 +1,852 @@
+{
+    "aluno": [
+        {
+            "id": 1,
+            "nome": "Vinicius",
+            "login": "a",
+            "senha": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+            "idade": "12",
+            "trilha_atual": 1,
+            "modulos_concluidos": [],
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": 100.0
+            }
+        },
+        {
+            "id": 2,
+            "nome": "b",
+            "login": "b",
+            "senha": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+            "idade": "67",
+            "trilha_atual": 1,
+            "modulos_concluidos": [
+                1
+            ],
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": 100.0
+            }
+        },
+        {
+            "id": 3,
+            "nome": "william lixo",
+            "login": "will",
+            "senha": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+            "idade": "26",
+            "trilha_atual": 1,
+            "modulos_concluidos": [
+                1,
+                2
+            ],
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": 100.0,
+                "2": 100.0
+            }
+        }
+    ],
+    "trilhas": [
+        {
+            "id": 1,
+            "nome": "Fundamentos de Python",
+            "modulos": [
+                {
+                    "id": 1,
+                    "nome": "Variáveis e Tipos",
+                    "objetivo": "Entender variáveis, tipos primitivos e operações básicas.",
+                    "topicos": [
+                        "Declaração de variáveis",
+                        "int, float, str, bool",
+                        "Operadores aritméticos",
+                        "Interpolação de strings"
+                    ],
+                    "desafios": [
+                        "Calculadora simples",
+                        "Conversor de temperatura"
+                    ],
+                    "conteudo": "Aprenda como armazenar valores em variáveis e manipular tipos básicos em Python.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual o tipo de dado de 3.14 em Python?",
+                            "alternativas": [
+                                "A) int",
+                                "B) float",
+                                "C) str",
+                                "D) bool"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Como se declara uma variável?",
+                            "alternativas": [
+                                "A) var x = 5",
+                                "B) x := 5",
+                                "C) x = 5",
+                                "D) int x = 5"
+                            ],
+                            "resposta": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "nome": "Controle de Fluxo",
+                    "objetivo": "Usar condicionais e laços para controlar o fluxo do programa.",
+                    "topicos": [
+                        "if, elif, else",
+                        "while e for",
+                        "range()",
+                        "break e continue"
+                    ],
+                    "desafios": [
+                        "Jogo de adivinhação",
+                        "Tabuada com for"
+                    ],
+                    "conteudo": "Descubra como tomar decisões no código e repetir ações com loops.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual saída será impressa por:\n\n```\nif 3 > 2:\n    print('Maior')\nelse:\n    print('Menor')\n```",
+                            "alternativas": [
+                                "A) Maior",
+                                "B) Menor",
+                                "C) Erro de sintaxe",
+                                "D) Nada"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Qual o resultado de:\n\n```\nfor i in range(1,5):\n    if i == 3:\n        break\n    print(i)\n```",
+                            "alternativas": [
+                                "A) 1 2 3 4",
+                                "B) 1 2",
+                                "C) 1 2 3",
+                                "D) Erro em tempo de execução"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para pular a iteração atual em um laço, usamos:",
+                            "alternativas": [
+                                "A) stop",
+                                "B) continue",
+                                "C) pass",
+                                "D) skip"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "nome": "Estruturas de Dados",
+                    "objetivo": "Trabalhar com coleções nativas do Python.",
+                    "topicos": [
+                        "Listas e métodos",
+                        "Tuplas e sets",
+                        "Dicionários",
+                        "Compreensões de lista"
+                    ],
+                    "desafios": [
+                        "Gerenciador de tarefas",
+                        "Contador de palavras"
+                    ],
+                    "conteudo": "Aprenda a armazenar grupos de itens e iterar sobre eles.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual método adiciona um elemento ao fim de uma lista?",
+                            "alternativas": [
+                                "A) list.add()",
+                                "B) list.insert()",
+                                "C) list.append()",
+                                "D) list.push()"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Como você acessa o valor de chave 'nome' em um dicionário `d`?",
+                            "alternativas": [
+                                "A) d.nome",
+                                "B) d['nome']",
+                                "C) d.get(1)",
+                                "D) d[name]"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Qual dessas é uma tupla válida?",
+                            "alternativas": [
+                                "A) (1, 2, 3)",
+                                "B) [1, 2, 3]",
+                                "C) {1, 2, 3}",
+                                "D) <1, 2, 3>"
+                            ],
+                            "resposta": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "nome": "Funções e Módulos",
+                    "objetivo": "Organizar o código em funções reutilizáveis.",
+                    "topicos": [
+                        "Definindo funções (def)",
+                        "Parâmetros e retorno",
+                        "*args e **kwargs",
+                        "Importando módulos"
+                    ],
+                    "projetos": [
+                        "Calculadora com menu interativo"
+                    ],
+                    "conteudo": "Saiba como criar e reutilizar blocos de código em funções.",
+                    "questoes": [
+                        {
+                            "pergunta": "Como se define uma função em Python?",
+                            "alternativas": [
+                                "A) function foo():",
+                                "B) def foo():",
+                                "C) func foo():",
+                                "D) define foo():"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Qual a sintaxe correta para importar apenas `sqrt` do módulo `math`?",
+                            "alternativas": [
+                                "A) import math.sqrt",
+                                "B) from math import sqrt",
+                                "C) include math.sqrt",
+                                "D) using math import sqrt"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "O que `*args` faz numa definição de função?",
+                            "alternativas": [
+                                "A) Argumentos nomeados",
+                                "B) Lista de tuplas",
+                                "C) Recebe quantidade variável de argumentos posicionais",
+                                "D) Recebe um dicionário"
+                            ],
+                            "resposta": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "nome": "Manipulação de Arquivos",
+                    "objetivo": "Ler e escrever arquivos no sistema de arquivos.",
+                    "topicos": [
+                        "open() com modos r, w, a",
+                        "with para gerenciamento de contexto",
+                        "Leitura e escrita de linhas"
+                    ],
+                    "projetos": [
+                        "Sistema de cadastro em .txt"
+                    ],
+                    "conteudo": "Aprenda a persistir dados em arquivos de texto usando Python.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual modo abre um arquivo para anexar texto sem apagar o anterior?",
+                            "alternativas": [
+                                "A) 'r'",
+                                "B) 'w'",
+                                "C) 'a'",
+                                "D) 'x'"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Qual a vantagem de usar `with open(...) as f:`?",
+                            "alternativas": [
+                                "A) Velocidade",
+                                "B) Tratamento automático de fechamento do arquivo",
+                                "C) Permite múltiplos arquivos",
+                                "D) Faz backup automático"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para ler todo o conteúdo de um arquivo em uma string usamos:",
+                            "alternativas": [
+                                "A) f.read()",
+                                "B) f.readlines()",
+                                "C) f.readline()",
+                                "D) f.open()"
+                            ],
+                            "resposta": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "nome": "Tratamento de Erros",
+                    "objetivo": "Tornar o código mais robusto com exceções.",
+                    "topicos": [
+                        "try, except, finally",
+                        "Exceções personalizadas"
+                    ],
+                    "desafios": [
+                        "Validador de entrada"
+                    ],
+                    "conteudo": "Entenda como capturar e tratar erros para evitar crashes.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual bloco captura exceções em Python?",
+                            "alternativas": [
+                                "A) try",
+                                "B) except",
+                                "C) finally",
+                                "D) catch"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Onde você coloca o código que sempre deve ser executado, ocorra exceção ou não?",
+                            "alternativas": [
+                                "A) try",
+                                "B) except",
+                                "C) finally",
+                                "D) else"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Para lançar uma exceção personalizada, usamos:",
+                            "alternativas": [
+                                "A) throw MyError()",
+                                "B) raise MyError()",
+                                "C) error MyError()",
+                                "D) exception MyError()"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "nome": "Projeto Final de Python",
+                    "objetivo": "Aplicar tudo em um pequeno projeto real.",
+                    "topicos": [],
+                    "projetos": [
+                        "Mini-app de notas com JSON"
+                    ],
+                    "conteudo": "Desenvolva uma aplicação completa que armazena dados em JSON.",
+                    "questoes": [
+                        {
+                            "pergunta": "Que método do `json` converte objeto Python em string JSON?",
+                            "alternativas": [
+                                "A) json.parse()",
+                                "B) json.dumps()",
+                                "C) json.to_json()",
+                                "D) json.stringify()"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para ler um JSON de um arquivo e já obter dicionário usamos:",
+                            "alternativas": [
+                                "A) json.load(f)",
+                                "B) json.read(f)",
+                                "C) json.parse(f)",
+                                "D) json.open(f)"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Em um mini-app de notas, qual estrutura é ideal para armazenar cada nota com identificador?",
+                            "alternativas": [
+                                "A) Lista de listas",
+                                "B) Dicionário de dicionários",
+                                "C) Tupla de tuplas",
+                                "D) Conjunto de strings"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Desenvolvimento Web com Python",
+            "modulos": [
+                {
+                    "id": 1,
+                    "nome": "HTML & CSS Básico",
+                    "objetivo": "Estruturar páginas com HTML e estilizar com CSS.",
+                    "topicos": [
+                        "Tags HTML essenciais",
+                        "Classes e IDs",
+                        "Box model",
+                        "Flexbox básico"
+                    ],
+                    "projetos": [
+                        "Página de portfólio simples"
+                    ],
+                    "conteudo": "Aprenda a criar a estrutura e o estilo de uma página web estática.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual tag define um parágrafo em HTML?",
+                            "alternativas": [
+                                "A) <div>",
+                                "B) <p>",
+                                "C) <span>",
+                                "D) <h1>"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para aplicar um estilo interno, usamos:",
+                            "alternativas": [
+                                "A) <link>",
+                                "B) <script>",
+                                "C) <style>",
+                                "D) Inline CSS"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Qual propriedade do CSS muda a cor do fundo?",
+                            "alternativas": [
+                                "A) color",
+                                "B) background-color",
+                                "C) font-size",
+                                "D) margin"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "nome": "Flask Framework",
+                    "objetivo": "Criar aplicações web simples em Python.",
+                    "topicos": [
+                        "Rotas e views",
+                        "Templates Jinja2",
+                        "Formulários",
+                        "HTTP verbs"
+                    ],
+                    "projetos": [
+                        "Microblog com Flask"
+                    ],
+                    "conteudo": "Descubra como servir páginas dinâmicas usando Flask.",
+                    "questoes": [
+                        {
+                            "pergunta": "Em Flask, qual decorator define uma rota?",
+                            "alternativas": [
+                                "A) @app.route",
+                                "B) @app.url",
+                                "C) @route.app",
+                                "D) @app.path"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Para renderizar um template, usamos:",
+                            "alternativas": [
+                                "A) render(html)",
+                                "B) render_template()",
+                                "C) template()",
+                                "D) show()"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "O método HTTP padrão para receber dados de formulário é:",
+                            "alternativas": [
+                                "A) GET",
+                                "B) POST",
+                                "C) PUT",
+                                "D) DELETE"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "nome": "Django Básico",
+                    "objetivo": "Entender o framework Django e seu ORM.",
+                    "topicos": [
+                        "Projeto e apps",
+                        "Models e migrations",
+                        "Admin",
+                        "Autenticação"
+                    ],
+                    "projetos": [
+                        "Blog com Django"
+                    ],
+                    "conteudo": "Aprenda a criar projetos mais robustos com Django.",
+                    "questoes": [
+                        {
+                            "pergunta": "Em Django, onde definimos nossos modelos?",
+                            "alternativas": [
+                                "A) views.py",
+                                "B) models.py",
+                                "C) urls.py",
+                                "D) admin.py"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Qual comando gera migrações após criar/alterar um model?",
+                            "alternativas": [
+                                "A) makemodels",
+                                "B) create migrations",
+                                "C) makemigrations",
+                                "D) migrate"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Para acessar o admin, geralmente usamos a URL:",
+                            "alternativas": [
+                                "A) /manage/",
+                                "B) /administrator/",
+                                "C) /admin/",
+                                "D) /dashboard/"
+                            ],
+                            "resposta": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "nome": "APIs REST",
+                    "objetivo": "Construir e consumir APIs RESTful.",
+                    "topicos": [
+                        "JSON e serializers",
+                        "Rotas CRUD",
+                        "Testes de API"
+                    ],
+                    "projetos": [
+                        "API de tarefas"
+                    ],
+                    "conteudo": "Saiba como expor dados e funcionalidades via API.",
+                    "questoes": [
+                        {
+                            "pergunta": "O status HTTP para recurso não encontrado é:",
+                            "alternativas": [
+                                "A) 200",
+                                "B) 404",
+                                "C) 500",
+                                "D) 301"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Em REST, qual verbo usualmente é usado para criação de recurso?",
+                            "alternativas": [
+                                "A) GET",
+                                "B) POST",
+                                "C) PUT",
+                                "D) DELETE"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para retornar JSON em Flask, usamos:",
+                            "alternativas": [
+                                "A) jsonify()",
+                                "B) to_json()",
+                                "C) json()",
+                                "D) make_response()"
+                            ],
+                            "resposta": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "nome": "Deploy",
+                    "objetivo": "Colocar sua aplicação online.",
+                    "topicos": [
+                        "Heroku",
+                        "Git e GitHub",
+                        "Configurações de ambiente"
+                    ],
+                    "projetos": [
+                        "Deploy do microblog"
+                    ],
+                    "conteudo": "Aprenda a disponibilizar sua aplicação para o mundo.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual serviço gratuito é comumente usado para deploy de apps Flask?",
+                            "alternativas": [
+                                "A) AWS EC2",
+                                "B) Heroku",
+                                "C) DigitalOcean",
+                                "D) Azure Functions"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para enviar seu código ao repositório remoto, usamos:",
+                            "alternativas": [
+                                "A) git clone",
+                                "B) git push",
+                                "C) git add",
+                                "D) git commit"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Arquivo que configura variáveis de ambiente no Heroku:",
+                            "alternativas": [
+                                "A) .env",
+                                "B) Procfile",
+                                "C) config.py",
+                                "D) env.yaml"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "Ciência de Dados com Python",
+            "modulos": [
+                {
+                    "id": 1,
+                    "nome": "Introdução ao NumPy",
+                    "objetivo": "Manipular arrays de alta performance.",
+                    "topicos": [
+                        "ndarray",
+                        "Operações vetorizadas",
+                        "Indexação e slicing"
+                    ],
+                    "desafios": [
+                        "Análise de notas de alunos"
+                    ],
+                    "conteudo": "Aprenda a usar arrays para cálculos numéricos rápidos.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual objeto principal do NumPy armazena dados?",
+                            "alternativas": [
+                                "A) list",
+                                "B) ndarray",
+                                "C) DataFrame",
+                                "D) series"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para criar um array a partir de lista usamos:",
+                            "alternativas": [
+                                "A) numpy.array()",
+                                "B) numpy.ndarray()",
+                                "C) array()",
+                                "D) np.new_array()"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Operações vetorizadas são vantajosas porque:",
+                            "alternativas": [
+                                "A) Menos legíveis",
+                                "B) Mais lentas",
+                                "C) Mais eficientes",
+                                "D) Não existe"
+                            ],
+                            "resposta": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "nome": "Pandas para Dataframes",
+                    "objetivo": "Carregar e manipular tabelas de dados.",
+                    "topicos": [
+                        "Series e DataFrame",
+                        "Filtragem e agregação",
+                        "Leitura/escrita CSV"
+                    ],
+                    "projetos": [
+                        "Análise de vendas"
+                    ],
+                    "conteudo": "Descubra como usar DataFrames para explorar dados.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual método lê um CSV para DataFrame?",
+                            "alternativas": [
+                                "A) pd.read()",
+                                "B) pd.load_csv()",
+                                "C) pd.read_csv()",
+                                "D) pd.open_csv()"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Para ver as primeiras linhas do DataFrame, usamos:",
+                            "alternativas": [
+                                "A) head()",
+                                "B) first()",
+                                "C) show()",
+                                "D) top()"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Método para agregar com média é:",
+                            "alternativas": [
+                                "A) df.mean()",
+                                "B) df.aggregate()",
+                                "C) df.avg()",
+                                "D) df.apply()"
+                            ],
+                            "resposta": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "nome": "Visualização com Matplotlib",
+                    "objetivo": "Criar gráficos e visualizações básicas.",
+                    "topicos": [
+                        "Gráficos de linha",
+                        "Barras e pizza",
+                        "Customização"
+                    ],
+                    "projetos": [
+                        "Dashboard simples"
+                    ],
+                    "conteudo": "Aprenda a plotar dados para insights visuais.",
+                    "questoes": [
+                        {
+                            "pergunta": "Função para plotar gráfico de linhas:",
+                            "alternativas": [
+                                "A) plt.line()",
+                                "B) plt.plot()",
+                                "C) plt.graph()",
+                                "D) plt.chart()"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Para exibir o gráfico na tela, usamos:",
+                            "alternativas": [
+                                "A) show()",
+                                "B) display()",
+                                "C) render()",
+                                "D) view()"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Parâmetro para definir título do gráfico é:",
+                            "alternativas": [
+                                "A) title",
+                                "B) set_title",
+                                "C) xlabel",
+                                "D) ylabel"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "nome": "Estatística Básica",
+                    "objetivo": "Conceitos de média, moda, mediana, desvio padrão.",
+                    "topicos": [
+                        "Média e mediana",
+                        "Moda e variância",
+                        "Desvio padrão"
+                    ],
+                    "desafios": [
+                        "Resumo estatístico de dataset"
+                    ],
+                    "conteudo": "Entenda medidas estatísticas para analisar dados.",
+                    "questoes": [
+                        {
+                            "pergunta": "Moda é a medida que indica:",
+                            "alternativas": [
+                                "A) Média aritmética",
+                                "B) Valor que mais se repete",
+                                "C) Valor central",
+                                "D) Dispersão"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Mediana em conjunto de 4 valores é média dos:",
+                            "alternativas": [
+                                "A) 1º e 4º",
+                                "B) 2º e 3º",
+                                "C) 1º e 2º",
+                                "D) 3º e 4º"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Desvio padrão mede:",
+                            "alternativas": [
+                                "A) Tendência central",
+                                "B) Dispersão dos dados",
+                                "C) Soma dos valores",
+                                "D) Valor máximo"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "nome": "Machine Learning com Scikit-Learn",
+                    "objetivo": "Criar modelos de classificação e regressão.",
+                    "topicos": [
+                        "Treino e teste",
+                        "Classificadores",
+                        "Métricas de performance"
+                    ],
+                    "projetos": [
+                        "Classificador de flores (Iris)"
+                    ],
+                    "conteudo": "Descubra como treinar e avaliar modelos simples.",
+                    "questoes": [
+                        {
+                            "pergunta": "Método para dividir dados em treino e teste:",
+                            "alternativas": [
+                                "A) train_test()",
+                                "B) split_data()",
+                                "C) train_test_split()",
+                                "D) cross_val()"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "Classe para regressão linear é:",
+                            "alternativas": [
+                                "A) LinearModel",
+                                "B) LinearRegression",
+                                "C) Regression",
+                                "D) LinReg"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Parâmetro que define proporção de teste é:",
+                            "alternativas": [
+                                "A) test_size",
+                                "B) size_test",
+                                "C) split_ratio",
+                                "D) test_split"
+                            ],
+                            "resposta": "A"
+                        }
+                    ]
+                }
+            ]
+        }
+        
+        
+
+    ]
+}
