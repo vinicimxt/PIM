@@ -172,7 +172,10 @@ def aulas_programacao(aluno):
     while True:
         print(f"\n--- {trilha['nome']} ---")
         for m in trilha['modulos']:
-            status = "✅" if m['id'] in aluno.get('modulos_concluidos', []) else "❌"
+            if m['id'] in aluno.get('modulos_concluidos', []):
+                status = "✅"
+            else:
+                status = "⏳" if m["id"] == 1 or m["id"] - 1 in aluno.get('modulos_concluidos', []) else "🔒"
             print(f"{m['id']}. {m['nome']} {status}")
         print("0. Voltar")
         escolha = input("Escolha o módulo: ").strip()
@@ -182,7 +185,10 @@ def aulas_programacao(aluno):
             mid = int(escolha)
             mod = next((x for x in trilha['modulos'] if x['id']==mid), None)
             if mod:
-                menu_modulo(aluno, mod, dados)
+                if mod['id'] in aluno.get('modulos_concluidos', []) or mod['id'] == 1 or mod['id'] - 1 in aluno.get('modulos_concluidos', []):
+                    menu_modulo(aluno, mod, dados)
+                else:
+                    print("❌ Módulo bloqueado! Complete os anteriores para liberar.")
                 continue
         print("⚠️  Módulo inválido.")
 
