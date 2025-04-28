@@ -1,41 +1,72 @@
+import os
 import json
 import hashlib
-import os
 
-DADOS_FILE = 'alunos.json'
+DATA_DIR = 'src/data'
+DADOS_FILE = os.path.join(DATA_DIR, 'user.json')
+TRILHAS_FILE = os.path.join(DATA_DIR, 'trilhas.json')
 
-def carregar_dados():
-    if os.path.exists(DADOS_FILE):
-        with open(DADOS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"aluno": [], "trilhas": []}
+def carregar_json(path):
+    if os.path.exists(path):
+        with open(path, 'r', encoding='utf-8') as f:
+            try:
+                data = json.load(f)
+                return data if isinstance(data, (list, dict)) else {}
+            except json.JSONDecodeError as e:
+                print(f"⚠️ Erro ao carregar JSON em {path}: {e}")
+                return {}
+    return {}
 
-def salvar_dados(dados):
-    with open(DADOS_FILE, 'w', encoding='utf-8') as f:
+def salvar_json(path, dados):
+    with open(path, 'w', encoding='utf-8') as f:
         json.dump(dados, f, indent=4, ensure_ascii=False)
+
+def carregar_dados_usuario():
+    return carregar_json(DADOS_FILE)
+
+def salvar_dados_usuario(dados):
+    salvar_json(DADOS_FILE, dados)
+
+def carregar_trilhas():
+    if not os.path.exists(TRILHAS_FILE):
+        print("⚠️ Arquivo trilhas.json não encontrado na pasta /data.")
+        return []
+    return carregar_json(TRILHAS_FILE)
+
+def carregar_modulos(trilha_nome_snake):
+    path = os.path.join(DATA_DIR, 'modules', f"{trilha_nome_snake}.json")
+    return carregar_json(path)
+
+def carregar_conteudo(trilha_nome_snake, id_modulo):
+    path = os.path.join(DATA_DIR, 'contents', trilha_nome_snake, f"module_{id_modulo}_content.json")
+    return carregar_json(path)
+
+def carregar_questoes(trilha_nome_snake, id_modulo):
+    path = os.path.join(DATA_DIR, 'questions', trilha_nome_snake, f"{trilha_nome_snake}_module{id_modulo}_questions.json")
+    return carregar_json(path)
+
+def snake_case(nome):
+    return nome.lower().replace(' ', '_').replace(':', '').replace(',', '').replace('-', '').replace('__', '_')
 
 def criptografar_senha(senha):
     return hashlib.sha256(senha.encode()).hexdigest()
 
-# ---------------------------------------------------
-# Cadastro / Login
-# ---------------------------------------------------
 def cadastrar_usuario():
-    dados = carregar_dados()
+    dados = carregar_dados_usuario()
     print("\n--- Cadastro de Novo Usuário ---")
     nome = input("Nome completo: ").strip()
     idade = input("Idade: ").strip()
     login = input("Login desejado: ").strip()
 
-    if any(a['login'] == login for a in dados['aluno']):
+    if any(a['login'] == login for a in dados.get('aluno', [])):
         print("⚠️  Login já em uso.")
         return
 
     senha = input("Senha: ").strip()
     hash_senha = criptografar_senha(senha)
 
-    novo_id = (dados['aluno'][-1]['id'] if dados['aluno'] else 0) + 1
-    dados['aluno'].append({
+    novo_id = (dados['aluno'][-1]['id'] if dados.get('aluno') else 0) + 1
+    aluno = {
         "id": novo_id,
         "nome": nome,
         "login": login,
@@ -46,26 +77,25 @@ def cadastrar_usuario():
         "projetos_concluidos": [],
         "desafios_concluidos": [],
         "notas": {}
-    })
-    salvar_dados(dados)
+    }
+    dados.setdefault('aluno', []).append(aluno)
+    salvar_dados_usuario(dados)
     print("✅ Usuário cadastrado com sucesso!")
 
 def login_usuario():
-    dados = carregar_dados()
+    dados = carregar_dados_usuario()
     print("\n--- Login ---")
     login = input("Login: ").strip()
     senha = input("Senha: ").strip()
     hash_senha = criptografar_senha(senha)
-    for aluno in dados['aluno']:
+
+    for aluno in dados.get('aluno', []):
         if aluno['login'] == login and aluno['senha'] == hash_senha:
             print(f"\n🎉 Bem‐vindo(a), {aluno['nome']}!")
             return aluno
     print("⚠️  Login ou senha inválidos.")
     return None
 
-# ---------------------------------------------------
-# Estatísticas de Progresso
-# ---------------------------------------------------
 def calcular_mediana(lista):
     lista_ordenada = sorted(lista)
     n = len(lista_ordenada)
@@ -74,29 +104,42 @@ def calcular_mediana(lista):
     return (lista_ordenada[n//2 - 1] + lista_ordenada[n//2]) / 2
 
 def mostrar_estatisticas():
-    dados = carregar_dados()
-    conclusoes = [len(a.get('modulos_concluidos', [])) for a in dados['aluno']]
-    if not conclusoes:
-        print("Nenhum dado de progresso disponível.")
-        return
-    media = sum(conclusoes) / len(conclusoes)
-    moda = max(set(conclusoes), key=conclusoes.count)
-    mediana = calcular_mediana(conclusoes)
-    print(f"\n--- Estatísticas de Progresso ---")
-    print(f"Média de módulos concluídos: {media:.2f}")
-    print(f"Moda de módulos concluídos: {moda}")
-    print(f"Mediana de módulos concluídos: {mediana}")
+    dados = carregar_dados_usuario()
+    trilhas = carregar_trilhas()
 
-# ---------------------------------------------------
-# Quiz e avaliações
-# ---------------------------------------------------
-def fazer_quiz(aluno, modulo, dados, id_trilha):
-    questoes = modulo.get('questoes', [])
+    if not dados.get('aluno'):
+        print("Nenhum aluno cadastrado.")
+        return
+
+    print("\n--- Estatísticas de Progresso ---")
+    for trilha in trilhas:
+        id_trilha = str(trilha['id_trilha'])
+        nome_trilha = trilha['nome']
+
+        conclusoes_trilha = [
+            len(aluno.get('modulos_concluidos', {}).get(id_trilha, []))
+            for aluno in dados['aluno']
+        ]
+
+        if not any(conclusoes_trilha):
+            print(f"\n📚 {nome_trilha}: Nenhum módulo concluído ainda.")
+            continue
+
+        media = sum(conclusoes_trilha) / len(conclusoes_trilha)
+        moda = max(set(conclusoes_trilha), key=conclusoes_trilha.count)
+        mediana = calcular_mediana(conclusoes_trilha)
+
+        print(f"\n📚 {nome_trilha}")
+        print(f" - Média de módulos concluídos: {media:.2f}")
+        print(f" - Moda de módulos concluídos: {moda}")
+        print(f" - Mediana de módulos concluídos: {mediana}")
+
+def fazer_quiz(aluno, questoes, trilha_nome_snake, id_trilha, id_modulo):
     if not questoes:
         print("\n⚠️  Este módulo não possui questionário.")
         return
 
-    print(f"\n🧠 Quiz: {modulo['nome']}")
+    print("\n🧠 Quiz iniciado!")
     acertos = 0
 
     for q in questoes:
@@ -114,151 +157,122 @@ def fazer_quiz(aluno, modulo, dados, id_trilha):
     nota = round((acertos / total) * 100, 2)
     print(f"\n📊 Você acertou {acertos} de {total} → Nota: {nota}%")
 
-    # Se acertou todas as questões (nota 100), marca módulo como concluído
     if nota == 100:
-        if modulo['id'] not in aluno['modulos_concluidos'].get(id_trilha, []):
-            aluno['modulos_concluidos'].setdefault(id_trilha, []).append(modulo['id'])
-            print(f"🎉 Parabéns! Etapa '{modulo['nome']}' concluída com sucesso!")
+        aluno.setdefault('modulos_concluidos', {}).setdefault(str(id_trilha), []).append(id_modulo)
+        print(f"🎉 Parabéns! Módulo {id_modulo} concluído!")
 
-    # Armazena a nota no perfil do aluno
-    aluno.setdefault('notas', {}).setdefault(id_trilha, []).append(nota)
+    aluno.setdefault('notas', {}).setdefault(str(id_trilha), []).append(nota)
 
-    # Atualiza o aluno na lista e salva tudo
-    for i, a in enumerate(dados['aluno']):
+    dados = carregar_dados_usuario()
+    for i, a in enumerate(dados.get('aluno', [])):
         if a['login'] == aluno['login']:
             dados['aluno'][i] = aluno
             break
-    salvar_dados(dados)
+    salvar_dados_usuario(dados)
 
-# ---------------------------------------------------
-# Mini-menu de Módulo
-# ---------------------------------------------------
-def menu_modulo(aluno, modulo, dados, trilha_id):
+def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
+    trilha_snake = snake_case(trilha_nome)
+    conteudo = carregar_conteudo(trilha_snake, modulo['id_modulo'])
+    questoes = carregar_questoes(trilha_snake, modulo['id_modulo'])
+
     while True:
         print(f"\n--- Módulo: {modulo['nome']} ---")
         print("1. Ver Conteúdo")
         print("2. Fazer Quiz")
         print("0. Voltar")
         op = input("Opção: ").strip()
+
         if op == "1":
-            print(f"\nObjetivo: {modulo.get('objetivo','')}")
-            print(f"Conteúdo: {modulo.get('conteudo','')}")
-            if modulo.get('topicos'):
-                print("Tópicos:")
-                for t in modulo['topicos']:
-                    print(f"  - {t}")
-            if modulo.get('desafios'):
-                print("Desafios:")
-                for d in modulo['desafios']:
-                    print(f"  - {d}")
-            if modulo.get('projetos'):
-                print("Projetos:")
-                for p in modulo['projetos']:
-                    print(f"  - {p}")
+            print(f"\n📚 Conteúdo: {conteudo.get('descricao', 'Sem descrição disponível.')}")
             input("\nPressione Enter para continuar.")
         elif op == "2":
-            fazer_quiz(aluno, modulo, dados, trilha_id)
+            fazer_quiz(aluno, questoes, trilha_snake, id_trilha, modulo['id_modulo'])
         elif op == "0":
             break
         else:
-            print("⚠️  Opção inválida.")
+            print("⚠️ Opção inválida.")
 
-# ---------------------------------------------------
-# Aulas / Módulos
-# ---------------------------------------------------
-def menu_trilhas(aluno, trilha):
-    dados = carregar_dados()  # Carrega os dados das trilhas
-    
-    if not trilha:
-        print("⚠️ Trilha não encontrada.")
-        return
-    
+def menu_trilhas(aluno):
+    trilhas = carregar_trilhas()
+    print(trilhas)
     while True:
-        print(f"\n--- {trilha['nome']} ---")
-        
-        # Exibe os módulos da trilha escolhida
-        for m in trilha['modulos']:
-            modulos_concluidos = aluno.get('modulos_concluidos', {}).get(trilha['id'], [])
-            if m['id'] in modulos_concluidos:
-                status = "✅"  # Módulo concluído
-            else:
-                # Módulo em progresso ou bloqueado
-                status = "⏳" if m["id"] == 1 or m["id"] - 1 in modulos_concluidos else "🔒"
-            print(f"{m['id']}. {m['nome']} {status}")
-        
+        print("\n--- Trilhas Disponíveis ---")
+        for t in trilhas:
+            print(f"{t['id_trilha']}. {t['nome']}")
         print("0. Voltar")
-        escolha = input("Escolha o módulo: ").strip()
-        
-        # Opção para voltar
-        if escolha == "0":
-            break
-        
-        # Verificação da escolha
-        if escolha.isdigit():
-            mid = int(escolha)
-            mod = next((x for x in trilha['modulos'] if x['id'] == mid), None)
-            if mod:
-                if mod['id'] in modulos_concluidos or mod['id'] == 1 or mod['id'] - 1 in modulos_concluidos:
-                    menu_modulo(aluno, mod, dados, trilha['id'])  # Chama o menu do módulo escolhido
-                else:
-                    print("❌ Módulo bloqueado! Complete os anteriores para liberar.")
-            else:
-                print("⚠️ Módulo inválido.")
-        else:
-            print("⚠️ Módulo inválido.")
-
-
-# ---------------------------------------------------
-# Menus de Fluxo
-# ---------------------------------------------------
-def menu_principal(aluno):
-    while True:
-        dados = carregar_dados()
-        ultimo_id_trilha = max(t['id'] for t in dados['trilhas']) # pega o maior ID de trilha (logo, ultima op)
-        op_estatisticas = ultimo_id_trilha + 1
-        print("\n--- Menu Principal ---")
-        
-        for trilha in dados['trilhas']:
-            print(f"{trilha['id']}. {trilha['nome']}")
-
-        # Exibe as outras opções    
-        print(f"{op_estatisticas}. Estatísticas")
-        print("0. Sair")
 
         op = input("Escolha: ").strip()
-        
-        if op.isdigit():
-            op = int(op)
-            if op == 0:
+        if op == "0":
+            break
+        if not op.isdigit():
+            print("⚠️ Opção inválida.")
+            continue
+
+        id_trilha = int(op)
+        trilha = next((t for t in trilhas if t['id_trilha'] == id_trilha), None)
+        if not trilha:
+            print("⚠️ Trilha inválida.")
+            continue
+
+        trilha_snake = snake_case(trilha['nome'])
+        modulos = carregar_modulos(trilha_snake)
+
+        while True:
+            print(f"\n--- {trilha['nome']} ---")
+            for m in modulos:
+                concluido = aluno.get('modulos_concluidos', {}).get(str(id_trilha), [])
+                status = "✅" if m['id_modulo'] in concluido else "🔒"
+                print(f"{m['id_modulo']}. {m['nome']} {status}")
+            print("0. Voltar")
+
+            escolha = input("Escolha o módulo: ").strip()
+            if escolha == "0":
                 break
-            elif op == op_estatisticas:
-                mostrar_estatisticas()
-            else:
-                trilha = next((t for t in dados['trilhas'] if t['id'] == op), None)
-                if trilha:
-                    menu_trilhas(aluno, trilha)
+            if escolha.isdigit():
+                mid = int(escolha)
+                modulo = next((x for x in modulos if x['id_modulo'] == mid), None)
+                if modulo:
+                    menu_modulo(aluno, trilha['nome'], id_trilha, modulo)
                 else:
-                    print("⚠️ Trilha inválida.")
+                    print("⚠️ Módulo inválido.")
+            else:
+                print("⚠️ Opção inválida.")
+
+def menu_principal(aluno):
+    while True:
+        print("\n--- Menu Principal ---")
+        print("1. Trilhas de Conhecimento")
+        print("2. Estatísticas")
+        print("0. Sair")
+        op = input("Escolha: ").strip()
+
+        if op == "1":
+            menu_trilhas(aluno)
+        elif op == "2":
+            mostrar_estatisticas()
+        elif op == "0":
+            break
         else:
-            print("⚠️  Opção inválida.")
+            print("⚠️ Opção inválida.")
 
 def menu_inicial():
     while True:
         print("\n=== Plataforma Educação Digital Segura ===")
         print("1. Cadastrar")
         print("2. Login")
-        print("3. Sair")
-        escolha = input("Opção: ").strip()
-        if escolha == "1":
+        print("0. Sair")
+        op = input("Escolha: ").strip()
+
+        if op == "1":
             cadastrar_usuario()
-        elif escolha == "2":
+        elif op == "2":
             aluno = login_usuario()
             if aluno:
                 menu_principal(aluno)
-        elif escolha == "3":
+        elif op == "0":
             break
         else:
-            print("⚠️  Inválido. Tente novamente.")
+            print("⚠️ Opção inválida.")
 
 if __name__ == "__main__":
     menu_inicial()
