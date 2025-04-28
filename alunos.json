@@ -1,71 +1,5 @@
 {
     "aluno": [
-        {
-            "id": 1,
-            "nome": "Vinicius",
-            "login": "a",
-            "senha": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
-            "idade": "12",
-            "trilha_atual": 1,
-            "modulos_concluidos": [],
-            "projetos_concluidos": [],
-            "desafios_concluidos": [],
-            "notas": {
-                "1": 100.0
-            }
-        },
-        {
-            "id": 2,
-            "nome": "b",
-            "login": "b",
-            "senha": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
-            "idade": "67",
-            "trilha_atual": 1,
-            "modulos_concluidos": [
-                1
-            ],
-            "projetos_concluidos": [],
-            "desafios_concluidos": [],
-            "notas": {
-                "1": 100.0
-            }
-        },
-        {
-            "id": 3,
-            "nome": "william lixo",
-            "login": "will",
-            "senha": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-            "idade": "26",
-            "trilha_atual": 1,
-            "modulos_concluidos": [
-                1,
-                2
-            ],
-            "projetos_concluidos": [],
-            "desafios_concluidos": [],
-            "notas": {
-                "1": 100.0,
-                "2": 100.0
-            }
-        },
-        {
-            "id": 4,
-            "nome": "asdasd",
-            "login": "d",
-            "senha": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
-            "idade": "33",
-            "trilha_atual": 1,
-            "modulos_concluidos": [
-                1,
-                2
-            ],
-            "projetos_concluidos": [],
-            "desafios_concluidos": [],
-            "notas": {
-                "1": 100.0,
-                "2": 100.0
-            }
-        }
     ],
     "trilhas": [
         {
@@ -387,7 +321,215 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 2,
+            "nome": "Fundamentos de Robótica",
+            "modulos": [
+                {
+                    "id": 1,
+                    "nome": "Introdução à Robótica",
+                    "objetivo": "Conhecer os fundamentos da robótica e o funcionamento básico de um robô.",
+                    "topicos": [
+                        "História da Robótica",
+                        "Partes de um Robô",
+                        "Tipos de Robôs",
+                        "Aplicações da Robótica"
+                    ],
+                    "conteudo": "Aprenda o que é a robótica e como os robôs são usados em diferentes áreas.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual a principal função de um atuador em um robô?",
+                            "alternativas": [
+                                "A) Sensores de ambiente",
+                                "B) Movimento do robô",
+                                "C) Processamento de dados",
+                                "D) Armazenamento de energia"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "Qual é o componente responsável por captar informações do ambiente no robô?",
+                            "alternativas": [
+                                "A) Atuador",
+                                "B) Sensor",
+                                "C) Processador",
+                                "D) Energia"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "nome": "Eletrônica Básica para Robôs",
+                    "objetivo": "Entender os componentes eletrônicos essenciais para o funcionamento de robôs.",
+                    "topicos": [
+                        "Resistores e capacitores",
+                        "Sensores e atuadores",
+                        "Motores DC",
+                        "Placas de prototipagem (Breadboard)"
+                    ],
+                    "conteudo": "Saiba como os circuitos eletrônicos controlam os movimentos e os sensores dos robôs.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual é a função de um motor DC em um robô?",
+                            "alternativas": [
+                                "A) Gerar luz",
+                                "B) Detectar obstáculos",
+                                "C) Gerar movimento",
+                                "D) Processar sinais"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "O que é uma breadboard?",
+                            "alternativas": [
+                                "A) Uma placa de circuito impresso",
+                                "B) Um dispositivo para prototipagem de circuitos",
+                                "C) Uma fonte de alimentação",
+                                "D) Um tipo de sensor"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "nome": "Programação de Robôs",
+                    "objetivo": "Programar robôs para realizar tarefas automatizadas.",
+                    "topicos": [
+                        "Introdução à programação de microcontroladores",
+                        "Linguagens como C e Python para robótica",
+                        "Controlando LEDs e motores",
+                        "Comunicação entre robôs e sensores"
+                    ],
+                    "conteudo": "Aprenda como programar robôs para que possam interagir com o ambiente.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual linguagem é mais comumente usada para programação de microcontroladores?",
+                            "alternativas": [
+                                "A) Python",
+                                "B) Java",
+                                "C) C",
+                                "D) HTML"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "O que é um microcontrolador?",
+                            "alternativas": [
+                                "A) Um tipo de motor",
+                                "B) Um tipo de sensor",
+                                "C) Um chip que controla os processos em um robô",
+                                "D) Um atuador"
+                            ],
+                            "resposta": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "nome": "Sensores e Atuadores",
+                    "objetivo": "Trabalhar com sensores e atuadores em robótica para detecção e movimento.",
+                    "topicos": [
+                        "Sensores de distância",
+                        "Sensores de temperatura",
+                        "Servomotores",
+                        "Motores de passo"
+                    ],
+                    "conteudo": "Entenda como utilizar sensores para coletar dados e atuadores para interagir com o ambiente.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual é o propósito de um sensor de distância em um robô?",
+                            "alternativas": [
+                                "A) Detectar obstáculos",
+                                "B) Controlar a velocidade do motor",
+                                "C) Armazenar dados",
+                                "D) Mover o robô"
+                            ],
+                            "resposta": "A"
+                        },
+                        {
+                            "pergunta": "Qual tipo de motor é usado para movimento preciso em robôs?",
+                            "alternativas": [
+                                "A) Motor DC",
+                                "B) Servo motor",
+                                "C) Motor de passo",
+                                "D) Todos os anteriores"
+                            ],
+                            "resposta": "D"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "nome": "Controle de Movimento de Robôs",
+                    "objetivo": "Programar o movimento de robôs usando algoritmos de controle.",
+                    "topicos": [
+                        "Controle de velocidade",
+                        "Controle de posição",
+                        "Algoritmos de navegação",
+                        "Detecção de colisões"
+                    ],
+                    "conteudo": "Saiba como controlar o movimento de robôs para que eles naveguem de maneira eficiente.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual técnica pode ser usada para evitar que um robô colida com obstáculos?",
+                            "alternativas": [
+                                "A) Programação de emergência",
+                                "B) Controle de posição",
+                                "C) Sensores de proximidade",
+                                "D) Algoritmos de navegação"
+                            ],
+                            "resposta": "C"
+                        },
+                        {
+                            "pergunta": "O que é um algoritmo de navegação em robótica?",
+                            "alternativas": [
+                                "A) Uma técnica para calcular a posição exata do robô",
+                                "B) Um algoritmo que permite ao robô determinar seu caminho em um ambiente",
+                                "C) Um método de controle de motores",
+                                "D) Nenhuma das alternativas"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "nome": "Projeto Final de Robótica",
+                    "objetivo": "Desenvolver um projeto prático que envolva todos os conhecimentos adquiridos.",
+                    "topicos": [],
+                    "projetos": [
+                        "Robô seguidor de linha",
+                        "Robô controlado por aplicativo"
+                    ],
+                    "conteudo": "Use tudo o que aprendeu para criar um robô funcional que execute tarefas de forma autônoma.",
+                    "questoes": [
+                        {
+                            "pergunta": "Qual o principal desafio de um robô seguidor de linha?",
+                            "alternativas": [
+                                "A) Navegar em um ambiente sem obstáculos",
+                                "B) Seguir uma linha reta com precisão",
+                                "C) Detectar objetos distantes",
+                                "D) Controlar a velocidade do motor"
+                            ],
+                            "resposta": "B"
+                        },
+                        {
+                            "pergunta": "O que é necessário para controlar um robô por meio de um aplicativo?",
+                            "alternativas": [
+                                "A) Usar um sensor de temperatura",
+                                "B) Programar um microcontrolador para se comunicar com o app",
+                                "C) Ter uma conexão USB",
+                                "D) Programar o robô apenas com sensores"
+                            ],
+                            "resposta": "B"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
-

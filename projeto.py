@@ -42,7 +42,7 @@ def cadastrar_usuario():
         "senha": hash_senha,
         "idade": idade,
         "trilha_atual": 1,
-        "modulos_concluidos": [],
+        "modulos_concluidos": {},
         "projetos_concluidos": [],
         "desafios_concluidos": [],
         "notas": {}
@@ -90,7 +90,7 @@ def mostrar_estatisticas():
 # ---------------------------------------------------
 # Quiz e avaliações
 # ---------------------------------------------------
-def fazer_quiz(aluno, modulo, dados):
+def fazer_quiz(aluno, modulo, dados, id_trilha):
     questoes = modulo.get('questoes', [])
     if not questoes:
         print("\n⚠️  Este módulo não possui questionário.")
@@ -116,12 +116,12 @@ def fazer_quiz(aluno, modulo, dados):
 
     # Se acertou todas as questões (nota 100), marca módulo como concluído
     if nota == 100:
-        if modulo['id'] not in aluno['modulos_concluidos']:
-            aluno['modulos_concluidos'].append(modulo['id'])
+        if modulo['id'] not in aluno['modulos_concluidos'].get(id_trilha, []):
+            aluno['modulos_concluidos'].setdefault(id_trilha, []).append(modulo['id'])
             print(f"🎉 Parabéns! Etapa '{modulo['nome']}' concluída com sucesso!")
 
     # Armazena a nota no perfil do aluno
-    aluno.setdefault('notas', {})[modulo['id']] = nota
+    aluno.setdefault('notas', {}).setdefault(id_trilha, []).append(nota)
 
     # Atualiza o aluno na lista e salva tudo
     for i, a in enumerate(dados['aluno']):
@@ -133,7 +133,7 @@ def fazer_quiz(aluno, modulo, dados):
 # ---------------------------------------------------
 # Mini-menu de Módulo
 # ---------------------------------------------------
-def menu_modulo(aluno, modulo, dados):
+def menu_modulo(aluno, modulo, dados, trilha_id):
     while True:
         print(f"\n--- Módulo: {modulo['nome']} ---")
         print("1. Ver Conteúdo")
@@ -157,7 +157,7 @@ def menu_modulo(aluno, modulo, dados):
                     print(f"  - {p}")
             input("\nPressione Enter para continuar.")
         elif op == "2":
-            fazer_quiz(aluno, modulo, dados)
+            fazer_quiz(aluno, modulo, dados, trilha_id)
         elif op == "0":
             break
         else:
@@ -166,85 +166,79 @@ def menu_modulo(aluno, modulo, dados):
 # ---------------------------------------------------
 # Aulas / Módulos
 # ---------------------------------------------------
-def aulas_programacao(aluno):
-    dados = carregar_dados()
-    trilha = dados['trilhas'][aluno['trilha_atual'] - 1]
+def menu_trilhas(aluno, trilha):
+    dados = carregar_dados()  # Carrega os dados das trilhas
+    
+    if not trilha:
+        print("⚠️ Trilha não encontrada.")
+        return
+    
     while True:
         print(f"\n--- {trilha['nome']} ---")
+        
+        # Exibe os módulos da trilha escolhida
         for m in trilha['modulos']:
-            if m['id'] in aluno.get('modulos_concluidos', []):
-                status = "✅"
+            modulos_concluidos = aluno.get('modulos_concluidos', {}).get(trilha['id'], [])
+            if m['id'] in modulos_concluidos:
+                status = "✅"  # Módulo concluído
             else:
-                status = "⏳" if m["id"] == 1 or m["id"] - 1 in aluno.get('modulos_concluidos', []) else "🔒"
+                # Módulo em progresso ou bloqueado
+                status = "⏳" if m["id"] == 1 or m["id"] - 1 in modulos_concluidos else "🔒"
             print(f"{m['id']}. {m['nome']} {status}")
+        
         print("0. Voltar")
         escolha = input("Escolha o módulo: ").strip()
+        
+        # Opção para voltar
         if escolha == "0":
             break
+        
+        # Verificação da escolha
         if escolha.isdigit():
             mid = int(escolha)
-            mod = next((x for x in trilha['modulos'] if x['id']==mid), None)
+            mod = next((x for x in trilha['modulos'] if x['id'] == mid), None)
             if mod:
-                if mod['id'] in aluno.get('modulos_concluidos', []) or mod['id'] == 1 or mod['id'] - 1 in aluno.get('modulos_concluidos', []):
-                    menu_modulo(aluno, mod, dados)
+                if mod['id'] in modulos_concluidos or mod['id'] == 1 or mod['id'] - 1 in modulos_concluidos:
+                    menu_modulo(aluno, mod, dados, trilha['id'])  # Chama o menu do módulo escolhido
                 else:
                     print("❌ Módulo bloqueado! Complete os anteriores para liberar.")
-                continue
-        print("⚠️  Módulo inválido.")
+            else:
+                print("⚠️ Módulo inválido.")
+        else:
+            print("⚠️ Módulo inválido.")
 
-def simulacao_robotica(aluno):
-    print("\n--- Simulação de Projetos de Robótica ---")
-    print("""
-1. Conecte um LED ao pino GPIO 17 (resistor 220Ω).
-2. Código exemplo com RPi.GPIO:
-   import RPi.GPIO as GPIO
-   import time
-   GPIO.setmode(GPIO.BCM)
-   GPIO.setup(17, GPIO.OUT)
-   try:
-       while True:
-           GPIO.output(17, GPIO.HIGH)
-           time.sleep(1)
-           GPIO.output(17, GPIO.LOW)
-           time.sleep(1)
-   except KeyboardInterrupt:
-       GPIO.cleanup()
-""")
-    input("Pressione Enter para voltar ao menu.")
-
-def dicas_seguranca():
-    print("\n--- Dicas de Segurança Digital ---")
-    print("""
-1. Nunca compartilhe sua senha.
-2. Use autenticação de dois fatores.
-3. Desconfie de links suspeitos.
-4. Faça backups regulares.
-5. Mantenha sistemas e antivírus atualizados.
-""")
-    input("Pressione Enter para voltar ao menu.")
 
 # ---------------------------------------------------
 # Menus de Fluxo
 # ---------------------------------------------------
 def menu_principal(aluno):
     while True:
+        dados = carregar_dados()
+        ultimo_id_trilha = max(t['id'] for t in dados['trilhas']) # pega o maior ID de trilha (logo, ultima op)
+        op_estatisticas = ultimo_id_trilha + 1
         print("\n--- Menu Principal ---")
-        print("1. Aulas de Programação Básica")
-        print("2. Simulação Robótica")
-        print("3. Dicas de Segurança")
-        print("4. Estatísticas")
-        print("5. Sair")
+        
+        for trilha in dados['trilhas']:
+            print(f"{trilha['id']}. {trilha['nome']}")
+
+        # Exibe as outras opções    
+        print(f"{op_estatisticas}. Estatísticas")
+        print("0. Sair")
+
         op = input("Escolha: ").strip()
-        if op == "1":
-            aulas_programacao(aluno)
-        elif op == "2":
-            simulacao_robotica(aluno)
-        elif op == "3":
-            dicas_seguranca()
-        elif op == "4":
-            mostrar_estatisticas()
-        elif op == "5":
-            break
+        
+        if op.isdigit():
+            op = int(op)
+            if op == 0:
+                break
+            elif op == op_estatisticas:
+                mostrar_estatisticas()
+            else:
+                trilha = next((t for t in dados['trilhas'] if t['id'] == op), None)
+                if trilha:
+                    menu_trilhas(aluno, trilha)
+                else:
+                    print("⚠️ Trilha inválida.")
         else:
             print("⚠️  Opção inválida.")
 
