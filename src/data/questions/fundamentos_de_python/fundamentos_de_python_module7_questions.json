@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Que método do `json` converte objeto Python em string JSON?",
+    "alternativas": [
+      "A) json.parse()",
+      "B) json.dumps()",
+      "C) json.to_json()",
+      "D) json.stringify()"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Para ler um JSON de um arquivo e já obter dicionário usamos:",
+    "alternativas": [
+      "A) json.load(f)",
+      "B) json.read(f)",
+      "C) json.parse(f)",
+      "D) json.open(f)"
+    ],
+    "resposta": "A"
+  },
+  {
+    "pergunta": "Em um mini-app de notas, qual estrutura é ideal para armazenar cada nota com identificador?",
+    "alternativas": [
+      "A) Lista de listas",
+      "B) Dicionário de dicionários",
+      "C) Tupla de tuplas",
+      "D) Conjunto de strings"
+    ],
+    "resposta": "B"
+  }
+]

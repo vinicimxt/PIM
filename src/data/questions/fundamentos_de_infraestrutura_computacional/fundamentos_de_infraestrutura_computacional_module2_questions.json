@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual é a principal característica do modelo de Von Neumann?",
+    "alternativas": [
+      "A) A CPU e a memória compartilham o mesmo espaço de endereçamento",
+      "B) O computador usa múltiplas unidades de processamento",
+      "C) A memória é separada em blocos de leitura e escrita",
+      "D) A CPU processa os dados sem interação com a memória"
+    ],
+    "resposta": "A"
+  },
+  {
+    "pergunta": "No Modelo de Von Neumann, qual é a função da ALU (Unidade Lógica e Aritmética)?",
+    "alternativas": [
+      "A) Controlar a comunicação entre a memória e os periféricos",
+      "B) Executar operações matemáticas e lógicas",
+      "C) Armazenar temporariamente os dados",
+      "D) Gerenciar a execução dos programas"
+    ],
+    "resposta": "B"
+  }
+]

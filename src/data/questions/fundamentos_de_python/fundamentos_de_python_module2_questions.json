@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Qual saída será impressa por:\n\n```\nif 3 > 2:\n    print('Maior')\nelse:\n    print('Menor')\n```",
+    "alternativas": [
+      "A) Maior",
+      "B) Menor",
+      "C) Erro de sintaxe",
+      "D) Nada"
+    ],
+    "resposta": "A"
+  },
+  {
+    "pergunta": "Qual o resultado de:\n\n```\nfor i in range(1,5):\n    if i == 3:\n        break\n    print(i)\n```",
+    "alternativas": [
+      "A) 1 2 3 4",
+      "B) 1 2",
+      "C) 1 2 3",
+      "D) Erro em tempo de execução"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Para pular a iteração atual em um laço, usamos:",
+    "alternativas": [
+      "A) stop",
+      "B) continue",
+      "C) pass",
+      "D) skip"
+    ],
+    "resposta": "B"
+  }
+]

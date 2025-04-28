@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Qual método adiciona um elemento ao fim de uma lista?",
+    "alternativas": [
+      "A) list.add()",
+      "B) list.insert()",
+      "C) list.append()",
+      "D) list.push()"
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Como você acessa o valor de chave 'nome' em um dicionário `d`?",
+    "alternativas": [
+      "A) d.nome",
+      "B) d['nome']",
+      "C) d.get(1)",
+      "D) d[name]"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Qual dessas é uma tupla válida?",
+    "alternativas": [
+      "A) (1, 2, 3)",
+      "B) [1, 2, 3]",
+      "C) {1, 2, 3}",
+      "D) <1, 2, 3>"
+    ],
+    "resposta": "A"
+  }
+]

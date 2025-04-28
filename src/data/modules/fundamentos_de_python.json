@@ -1,0 +1,92 @@
+[
+  {
+    "id_trilha": 1,
+    "id_modulo": 1,
+    "nome": "Variáveis e Tipos",
+    "objetivo": "Entender variáveis, tipos primitivos e operações básicas.",
+    "topicos": [
+      "Declaração de variáveis",
+      "int, float, str, bool",
+      "Operadores aritméticos",
+      "Interpolação de strings"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_1_content.json",
+    "questoes": "questions/fundamentos_de_python_module1_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 2,
+    "nome": "Controle de Fluxo",
+    "objetivo": "Usar condicionais e laços para controlar o fluxo do programa.",
+    "topicos": [
+      "if, elif, else",
+      "while e for",
+      "range()",
+      "break e continue"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_2_content.json",
+    "questoes": "questions/fundamentos_de_python_module2_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 3,
+    "nome": "Estruturas de Dados",
+    "objetivo": "Trabalhar com coleções nativas do Python.",
+    "topicos": [
+      "Listas e métodos",
+      "Tuplas e sets",
+      "Dicionários",
+      "Compreensões de lista"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_3_content.json",
+    "questoes": "questions/fundamentos_de_python_module3_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 4,
+    "nome": "Funções e Módulos",
+    "objetivo": "Organizar o código em funções reutilizáveis.",
+    "topicos": [
+      "Definindo funções (def)",
+      "Parâmetros e retorno",
+      "*args e **kwargs",
+      "Importando módulos"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_4_content.json",
+    "questoes": "questions/fundamentos_de_python_module4_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 5,
+    "nome": "Manipulação de Arquivos",
+    "objetivo": "Ler e escrever arquivos no sistema de arquivos.",
+    "topicos": [
+      "open() com modos r, w, a",
+      "with para gerenciamento de contexto",
+      "Leitura e escrita de linhas"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_5_content.json",
+    "questoes": "questions/fundamentos_de_python_module5_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 6,
+    "nome": "Tratamento de Erros",
+    "objetivo": "Tornar o código mais robusto com exceções.",
+    "topicos": [
+      "try, except, finally",
+      "Exceções personalizadas"
+    ],
+    "conteudo": "contents/fundamentos_de_python/module_6_content.json",
+    "questoes": "questions/fundamentos_de_python_module6_questions.json"
+  },
+  {
+    "id_trilha": 1,
+    "id_modulo": 7,
+    "nome": "Projeto Final de Python",
+    "objetivo": "Aplicar tudo em um pequeno projeto real.",
+    "topicos": [],
+    "conteudo": "contents/fundamentos_de_python/module_7_content.json",
+    "questoes": "questions/fundamentos_de_python_module7_questions.json"
+  }
+]

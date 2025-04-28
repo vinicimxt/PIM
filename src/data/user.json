@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "nome": "vini",
+        "login": "d",
+        "senha": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+        "idade": "23",
+        "trilha_atual": 1,
+        "modulos_concluidos": {
+            "1": [
+                1
+            ],
+            "2": [
+                1
+            ]
+        },
+        "projetos_concluidos": [],
+        "desafios_concluidos": [],
+        "notas": {
+            "1": [
+                100.0
+            ],
+            "2": [
+                100.0
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "nome": "asd",
+        "login": "asd",
+        "senha": "688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6",
+        "idade": "22",
+        "trilha_atual": 1,
+        "modulos_concluidos": {},
+        "projetos_concluidos": [],
+        "desafios_concluidos": [],
+        "notas": {}
+    }
+]

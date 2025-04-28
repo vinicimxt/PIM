@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual componente é responsável por processar as instruções de um computador?",
+    "alternativas": [
+      "A) Memória RAM",
+      "B) CPU",
+      "C) Disco rígido",
+      "D) Placa-mãe"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "O que caracteriza a memória RAM?",
+    "alternativas": [
+      "A) Memória volátil usada para armazenar dados temporários",
+      "B) Memória permanente para armazenar dados do sistema operacional",
+      "C) Memória usada para carregar o sistema operacional inicial",
+      "D) Memória usada para armazenar dados em grande volume"
+    ],
+    "resposta": "A"
+  }
+]

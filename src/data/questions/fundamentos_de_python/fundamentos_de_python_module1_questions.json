@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual o tipo de dado de 3.14 em Python?",
+    "alternativas": [
+      "A) int",
+      "B) float",
+      "C) str",
+      "D) bool"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Como se declara uma variável?",
+    "alternativas": [
+      "A) var x = 5",
+      "B) x := 5",
+      "C) x = 5",
+      "D) int x = 5"
+    ],
+    "resposta": "C"
+  }
+]

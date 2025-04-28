@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Como se define uma função em Python?",
+    "alternativas": [
+      "A) function foo():",
+      "B) def foo():",
+      "C) func foo():",
+      "D) define foo():"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Qual a sintaxe correta para importar apenas `sqrt` do módulo `math`?",
+    "alternativas": [
+      "A) import math.sqrt",
+      "B) from math import sqrt",
+      "C) include math.sqrt",
+      "D) using math import sqrt"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "O que `*args` faz numa definição de função?",
+    "alternativas": [
+      "A) Argumentos nomeados",
+      "B) Lista de tuplas",
+      "C) Recebe quantidade variável de argumentos posicionais",
+      "D) Recebe um dicionário"
+    ],
+    "resposta": "C"
+  }
+]
