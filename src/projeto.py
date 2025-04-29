@@ -37,8 +37,8 @@ def carregar_modulos(trilha_nome_snake):
     path = os.path.join(DATA_DIR, 'modules', f"{trilha_nome_snake}.json")
     return carregar_json(path)
 
-def carregar_conteudo(trilha_nome_snake, id_modulo):
-    path = os.path.join(DATA_DIR, 'contents', trilha_nome_snake, f"module_{id_modulo}_content.json")
+def carregar_conteudo( ):
+    path = os.path.join(DATA_DIR, 'contents', "contents.json")
     return carregar_json(path)
 
 def carregar_questoes(trilha_nome_snake, id_modulo):
@@ -134,7 +134,7 @@ def mostrar_estatisticas():
         print(f" - Moda de módulos concluídos: {moda}")
         print(f" - Mediana de módulos concluídos: {mediana}")
 
-def fazer_quiz(aluno, questoes, trilha_nome_snake, id_trilha, id_modulo):
+def fazer_quiz(aluno, questoes, id_trilha, id_modulo):
     if not questoes:
         print("\n⚠️  Este módulo não possui questionário.")
         return
@@ -172,7 +172,16 @@ def fazer_quiz(aluno, questoes, trilha_nome_snake, id_trilha, id_modulo):
 
 def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
     trilha_snake = snake_case(trilha_nome)
-    conteudo = carregar_conteudo(trilha_snake, modulo['id_modulo'])
+    conteudo_lista = carregar_conteudo()
+    
+    descricao = "Sem descrição disponível."
+    for trilha_conteudo in conteudo_lista:
+        if trilha_conteudo.get("id_trilha") == id_trilha:
+            chave = f"descricao_modulo_{modulo['id_modulo']}"
+            descricao = trilha_conteudo.get(chave, descricao)
+            print(descricao)
+            break
+    
     questoes = carregar_questoes(trilha_snake, modulo['id_modulo'])
 
     while True:
@@ -183,7 +192,7 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
         op = input("Opção: ").strip()
 
         if op == "1":
-            print(f"\n📚 Conteúdo: {conteudo.get('descricao', 'Sem descrição disponível.')}")
+            print(f"\n📚 Conteúdo: {descricao}")
             input("\nPressione Enter para continuar.")
         elif op == "2":
             fazer_quiz(aluno, questoes, trilha_snake, id_trilha, modulo['id_modulo'])
@@ -194,7 +203,7 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
 
 def menu_trilhas(aluno):
     trilhas = carregar_trilhas()
-    print(trilhas)
+    
     while True:
         print("\n--- Trilhas Disponíveis ---")
         for t in trilhas:
