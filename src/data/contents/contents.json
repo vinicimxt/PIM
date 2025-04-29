@@ -1,0 +1,19 @@
+[
+    {
+        "id_trilha": 1,
+        "descricao_modulo_1" : "Aprenda como armazenar valores em variáveis e manipular tipos básicos em Python.",
+        "descricao_modulo_2" : "Descubra como tomar decisões no código e repetir ações com loops.",
+        "descricao_modulo_3" : "Aprenda a armazenar grupos de itens e iterar sobre eles.",
+        "descricao_modulo_4" : "Saiba como criar e reutilizar blocos de código em funções.",
+        "descricao_modulo_5" : "Aprenda a persistir dados em arquivos de texto usando Python.",
+        "descricao_modulo_6" : "Entenda como capturar e tratar erros para evitar crashes.",
+        "descricao_modulo_7" : "Desenvolva uma aplicação completa que armazena dados em JSON."
+    },
+    {
+        "id_trilha": 2,
+        "descricao_modulo_1" : "Explore os componentes essenciais de um computador, sua arquitetura e como eles interagem.",
+        "descricao_modulo_2" : "Estude o modelo de Von Neumann, que descreve a estrutura e funcionamento básico de um computador.",
+        "descricao_modulo_3" : "Explore o papel do sistema operacional em gerenciar os recursos do hardware, como CPU, memória e dispositivos periféricos.",
+        "descricao_modulo_4" : "Estude como a virtualização permite rodar múltiplos sistemas operacionais e aplicações em um único hardware físico."
+    }
+]
