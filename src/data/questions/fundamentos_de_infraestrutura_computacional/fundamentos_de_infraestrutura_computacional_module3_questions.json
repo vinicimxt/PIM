@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual é a principal função de um sistema operacional?",
+    "alternativas": [
+      "A) Gerenciar a execução de programas e alocar recursos",
+      "B) Controlar a comunicação de dados entre redes",
+      "C) Definir como a CPU processa os dados",
+      "D) Monitorar a segurança física do computador"
+    ],
+    "resposta": "A"
+  },
+  {
+    "pergunta": "O que é uma thread?",
+    "alternativas": [
+      "A) Uma unidade de processamento que executa uma tarefa",
+      "B) Um tipo de dispositivo de entrada do sistema operacional",
+      "C) Um processo em execução dentro de um sistema operacional",
+      "D) A memória onde os dados temporários são armazenados"
+    ],
+    "resposta": "A"
+  }
+]

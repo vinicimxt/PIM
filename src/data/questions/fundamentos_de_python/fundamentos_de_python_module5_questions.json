@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Qual modo abre um arquivo para anexar texto sem apagar o anterior?",
+    "alternativas": [
+      "A) 'r'",
+      "B) 'w'",
+      "C) 'a'",
+      "D) 'x'"
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Qual a vantagem de usar `with open(...) as f:`?",
+    "alternativas": [
+      "A) Velocidade",
+      "B) Tratamento automático de fechamento do arquivo",
+      "C) Permite múltiplos arquivos",
+      "D) Faz backup automático"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Para ler todo o conteúdo de um arquivo em uma string usamos:",
+    "alternativas": [
+      "A) f.read()",
+      "B) f.readlines()",
+      "C) f.readline()",
+      "D) f.open()"
+    ],
+    "resposta": "A"
+  }
+]

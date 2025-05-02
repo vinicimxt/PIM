@@ -1,0 +1,64 @@
+{
+    "aluno": [
+        {
+            "id": 1,
+            "nome": "Matheus",
+            "login": "ohthias",
+            "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+            "idade": "17",
+            "trilha_atual": 1,
+            "modulos_concluidos": {
+                "1": [
+                    1
+                ]
+            },
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": [
+                    100.0
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "nome": "João",
+            "login": "joao",
+            "senha": "535fa30d7e25dd8a49f1536779734ec8286108d115da5045d77f3b4185d8f790",
+            "idade": "john",
+            "trilha_atual": 1,
+            "modulos_concluidos": {
+                "1": [
+                    1
+                ]
+            },
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": [
+                    100.0
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "nome": "Alan",
+            "login": "alan_01",
+            "senha": "aaedf33ec28cc5d94e26b1374c0d902a4143ed36559c388eb19db29873ffdc8a",
+            "idade": "20",
+            "trilha_atual": 1,
+            "modulos_concluidos": {
+                "1": [
+                    1
+                ]
+            },
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": [
+                    100.0
+                ]
+            }
+        }
+    ]
+}

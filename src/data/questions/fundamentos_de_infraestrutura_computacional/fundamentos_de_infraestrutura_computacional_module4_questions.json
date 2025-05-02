@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "O que é uma máquina virtual?",
+    "alternativas": [
+      "A) Um servidor físico usado para executar software",
+      "B) Um sistema operacional que opera diretamente sobre o hardware",
+      "C) Um ambiente isolado que simula um computador físico",
+      "D) Um software que simula redes de computadores"
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Qual é a função de um hipervisor?",
+    "alternativas": [
+      "A) Controlar a execução de múltiplas máquinas virtuais",
+      "B) Gerenciar o tráfego de rede em uma máquina virtual",
+      "C) Monitorar a temperatura do servidor físico",
+      "D) Armazenar dados nas máquinas virtuais"
+    ],
+    "resposta": "A"
+  }
+]

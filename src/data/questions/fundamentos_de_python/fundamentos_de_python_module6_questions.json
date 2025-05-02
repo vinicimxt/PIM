@@ -1,0 +1,32 @@
+[
+  {
+    "pergunta": "Qual bloco captura exceções em Python?",
+    "alternativas": [
+      "A) try",
+      "B) except",
+      "C) finally",
+      "D) catch"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Onde você coloca o código que sempre deve ser executado, ocorra exceção ou não?",
+    "alternativas": [
+      "A) try",
+      "B) except",
+      "C) finally",
+      "D) else"
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Para lançar uma exceção personalizada, usamos:",
+    "alternativas": [
+      "A) throw MyError()",
+      "B) raise MyError()",
+      "C) error MyError()",
+      "D) exception MyError()"
+    ],
+    "resposta": "B"
+  }
+]

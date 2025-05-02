@@ -1,0 +1,12 @@
+[
+  {
+    "id_trilha": 1,
+    "nome": "Fundamentos de Python",
+    "modules": "modules/fundamentos_de_python.json"
+  },
+  {
+    "id_trilha": 2,
+    "nome": "Fundamentos de Infraestrutura Computacional",
+    "modules": "modules/fundamentos_de_infraestrutura_computacional.json"
+  }
+]
