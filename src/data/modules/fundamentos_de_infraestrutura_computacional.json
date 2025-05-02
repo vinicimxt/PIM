@@ -11,7 +11,8 @@
       "Fontes de alimentação e periféricos"
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_1_content.json",
-    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module1_questions.json"
+    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module1_questions.json",
+    "link" : "/assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_1.pdf"
   },
   {
     "id_trilha": 2,
@@ -25,7 +26,8 @@
       "Como o modelo de Von Neumann influencia a arquitetura moderna de computadores"
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_2_content.json",
-    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module2_questions.json"
+    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module2_questions.json",
+    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_2.pdf"
   },
   {
     "id_trilha": 2,
@@ -39,7 +41,8 @@
       "Sistema de arquivos e controle de entrada/saída (E/S)"
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_3_content.json",
-    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module3_questions.json"
+    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module3_questions.json",
+    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_3.pdf"
   },
   {
     "id_trilha": 2,
@@ -53,6 +56,7 @@
       "Virtualização em servidores e ambientes de nuvem"
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_4_content.json",
-    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module4_questions.json"
+    "questoes": "questions/fundamentos_de_infraestrutura_computacional_module4_questions.json",
+    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_4.pdf"
   }
 ]

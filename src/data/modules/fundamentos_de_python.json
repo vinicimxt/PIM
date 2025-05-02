@@ -11,7 +11,8 @@
       "Interpolação de strings"
     ],
     "conteudo": "contents/fundamentos_de_python/module_1_content.json",
-    "questoes": "questions/fundamentos_de_python_module1_questions.json"
+    "questoes": "questions/fundamentos_de_python_module1_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_1.pdf"
   },
   {
     "id_trilha": 1,
@@ -25,7 +26,8 @@
       "break e continue"
     ],
     "conteudo": "contents/fundamentos_de_python/module_2_content.json",
-    "questoes": "questions/fundamentos_de_python_module2_questions.json"
+    "questoes": "questions/fundamentos_de_python_module2_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_2.pdf"
   },
   {
     "id_trilha": 1,
@@ -39,7 +41,8 @@
       "Compreensões de lista"
     ],
     "conteudo": "contents/fundamentos_de_python/module_3_content.json",
-    "questoes": "questions/fundamentos_de_python_module3_questions.json"
+    "questoes": "questions/fundamentos_de_python_module3_questions.json",
+    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_3.pdf"
   },
   {
     "id_trilha": 1,
@@ -53,7 +56,8 @@
       "Importando módulos"
     ],
     "conteudo": "contents/fundamentos_de_python/module_4_content.json",
-    "questoes": "questions/fundamentos_de_python_module4_questions.json"
+    "questoes": "questions/fundamentos_de_python_module4_questions.json",
+    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_4.pdf"
   },
   {
     "id_trilha": 1,
@@ -66,7 +70,8 @@
       "Leitura e escrita de linhas"
     ],
     "conteudo": "contents/fundamentos_de_python/module_5_content.json",
-    "questoes": "questions/fundamentos_de_python_module5_questions.json"
+    "questoes": "questions/fundamentos_de_python_module5_questions.json",
+    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_5.pdf"
   },
   {
     "id_trilha": 1,
@@ -78,7 +83,8 @@
       "Exceções personalizadas"
     ],
     "conteudo": "contents/fundamentos_de_python/module_6_content.json",
-    "questoes": "questions/fundamentos_de_python_module6_questions.json"
+    "questoes": "questions/fundamentos_de_python_module6_questions.json",
+    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_6.pdf"
   },
   {
     "id_trilha": 1,
@@ -87,6 +93,7 @@
     "objetivo": "Aplicar tudo em um pequeno projeto real.",
     "topicos": [],
     "conteudo": "contents/fundamentos_de_python/module_7_content.json",
-    "questoes": "questions/fundamentos_de_python_module7_questions.json"
+    "questoes": "questions/fundamentos_de_python_module7_questions.json",
+    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_7.pdf"
   }
 ]

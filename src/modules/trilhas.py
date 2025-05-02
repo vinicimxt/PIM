@@ -1,4 +1,4 @@
-from modules.utils import carregar_json, TRILHAS_FILE, carregar_modulos, carregar_conteudo, carregar_questoes, snake_case
+from modules.utils import carregar_json, TRILHAS_FILE, carregar_modulos, carregar_conteudo, carregar_questoes, snake_case, abrir_link
 from modules.usuario import carregar_dados_usuario, salvar_dados_usuario
 import os
 
@@ -66,6 +66,8 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
 
         if op == "1":
             print(f"\n📚 Conteúdo: {descricao}")
+            print("🔗 Link:", modulo['link'])
+            abrir_link(modulo['link'])
             input("\nPressione Enter para continuar.")
         elif op == "2":
             fazer_quiz(aluno, questoes, id_trilha, modulo['id_modulo'])

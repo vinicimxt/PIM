@@ -1,6 +1,7 @@
 import os
 import json
 import hashlib
+import subprocess, platform
 
 DATA_DIR = 'src/data'
 DADOS_FILE = os.path.join(DATA_DIR, 'user.json')
@@ -38,3 +39,26 @@ def snake_case(nome):
 
 def criptografar_senha(senha):
     return hashlib.sha256(senha.encode()).hexdigest()
+
+def abrir_link(caminho_relativo):
+    raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), ""))
+    
+    caminho_completo = os.path.normpath(os.path.join(raiz_projeto, caminho_relativo))
+
+
+    if not os.path.exists(caminho_completo):
+        print(f"❌ Arquivo não encontrado: {caminho_completo}")
+        return
+
+    sistema = platform.system()
+    try:
+        if sistema == "Darwin":  # macOS
+            subprocess.run(["open", caminho_completo])
+        elif sistema == "Linux":
+            subprocess.run(["xdg-open", caminho_completo])
+        elif sistema == "Windows":
+            subprocess.run(["start", caminho_completo], shell=True)
+        else:
+            print(f"⚠️ Sistema {sistema} não suportado.")
+    except Exception as e:
+        print(f"❌ Erro ao tentar abrir o arquivo: {e}")
