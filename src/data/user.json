@@ -59,6 +59,40 @@
                     100.0
                 ]
             }
+        },
+        {
+            "id": 4,
+            "nome": "lol",
+            "login": "l",
+            "senha": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0",
+            "idade": "32",
+            "trilha_atual": 1,
+            "modulos_concluidos": {},
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {}
+        },
+        {
+            "id": 5,
+            "nome": "vinic",
+            "login": "da",
+            "senha": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
+            "idade": 44,
+            "trilha_atual": 1,
+            "modulos_concluidos": {
+                "1": [
+                    1,
+                    2
+                ]
+            },
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {
+                "1": [
+                    100.0,
+                    100.0
+                ]
+            }
         }
     ]
 }

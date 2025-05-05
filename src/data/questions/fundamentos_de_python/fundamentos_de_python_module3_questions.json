@@ -1,32 +1,32 @@
 [
   {
-    "pergunta": "Qual método adiciona um elemento ao fim de uma lista?",
+    "pergunta": "O que acontece se você tentar modificar um valor dentro de uma tupla em Python?",
     "alternativas": [
-      "A) list.add()",
-      "B) list.insert()",
-      "C) list.append()",
-      "D) list.push()"
-    ],
-    "resposta": "C"
-  },
-  {
-    "pergunta": "Como você acessa o valor de chave 'nome' em um dicionário `d`?",
-    "alternativas": [
-      "A) d.nome",
-      "B) d['nome']",
-      "C) d.get(1)",
-      "D) d[name]"
+      "A) O valor é alterado normalmente, como em uma lista.",
+      "B) Uma exceção é gerada, pois tuplas não podem ser modificadas.",
+      "C) A tupla é automaticamente convertida em lista.",
+      "D) O Python ignora a tentativa de alteração."
     ],
     "resposta": "B"
   },
   {
-    "pergunta": "Qual dessas é uma tupla válida?",
+    "pergunta": "Qual das opções melhor descreve a principal diferença entre uma lista e um conjunto (set) em Python?",
     "alternativas": [
-      "A) (1, 2, 3)",
-      "B) [1, 2, 3]",
-      "C) {1, 2, 3}",
-      "D) <1, 2, 3>"
+      "A) Listas não podem conter elementos repetidos, mas conjuntos podem.",
+      "B) Conjuntos mantêm a ordem dos elementos, listas não.",
+      "C) Conjuntos não permitem elementos repetidos e não garantem ordem.",
+      "D) Listas só podem conter números inteiros, conjuntos podem conter qualquer tipo."
     ],
-    "resposta": "A"
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Dado a lista [5, 3, 6, 3, 1, 5], qual código abaixo remove duplicatas e retorna os números ordenados?",
+    "alternativas": [
+      "A) sorted([5, 3, 6, 3, 1, 5])",
+      "B) list(set([5, 3, 6, 3, 1, 5]))",
+      "C) sorted(set([5, 3, 6, 3, 1, 5]))",
+      "D) [x for x in [5, 3, 6, 3, 1, 5] if x not in set()]"
+    ],
+    "resposta": "C"
   }
 ]

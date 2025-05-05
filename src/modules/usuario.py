@@ -10,7 +10,15 @@ def cadastrar_usuario():
     dados = carregar_dados_usuario()
     print("\n--- Cadastro de Novo Usuário ---")
     nome = input("Nome completo: ").strip()
-    idade = input("Idade: ").strip()
+
+    while True:
+        idade_input = input("Idade: ").strip()
+        if idade_input.isdigit():
+            idade = int(idade_input)
+            break
+        else:
+            print("⚠️  Idade inválida. Digite apenas números.")
+
     login = input("Login desejado: ").strip()
 
     if any(a['login'] == login for a in dados.get('aluno', [])):
@@ -36,6 +44,7 @@ def cadastrar_usuario():
     dados.setdefault('aluno', []).append(aluno)
     salvar_dados_usuario(dados)
     print("✅ Usuário cadastrado com sucesso!")
+
 
 def login_usuario():
     dados = carregar_dados_usuario()

@@ -42,7 +42,7 @@
     ],
     "conteudo": "contents/fundamentos_de_python/module_3_content.json",
     "questoes": "questions/fundamentos_de_python_module3_questions.json",
-    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_3.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_3.pdf"
   },
   {
     "id_trilha": 1,
@@ -57,7 +57,7 @@
     ],
     "conteudo": "contents/fundamentos_de_python/module_4_content.json",
     "questoes": "questions/fundamentos_de_python_module4_questions.json",
-    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_4.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_4.pdf"
   },
   {
     "id_trilha": 1,
@@ -71,7 +71,7 @@
     ],
     "conteudo": "contents/fundamentos_de_python/module_5_content.json",
     "questoes": "questions/fundamentos_de_python_module5_questions.json",
-    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_5.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_5.pdf"
   },
   {
     "id_trilha": 1,
@@ -84,7 +84,7 @@
     ],
     "conteudo": "contents/fundamentos_de_python/module_6_content.json",
     "questoes": "questions/fundamentos_de_python_module6_questions.json",
-    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_6.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_6.pdf"
   },
   {
     "id_trilha": 1,
@@ -94,6 +94,6 @@
     "topicos": [],
     "conteudo": "contents/fundamentos_de_python/module_7_content.json",
     "questoes": "questions/fundamentos_de_python_module7_questions.json",
-    "link" : "assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_7.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_python/fundamentos_de_python_modulo_7.pdf"
   }
 ]

@@ -1,31 +1,31 @@
 [
   {
-    "pergunta": "Como se define uma função em Python?",
+    "pergunta": "Qual é uma das principais vantagens de se usar funções em Python?",
     "alternativas": [
-      "A) function foo():",
-      "B) def foo():",
-      "C) func foo():",
-      "D) define foo():"
+      "A) Elas deixam o código mais lento, mas mais bonito.",
+      "B) Servem apenas para cálculos matemáticos.",
+      "C) Evitam repetições e tornam o código mais organizado.",
+      "D) Substituem completamente o uso de classes."
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "O que o código `from math import pi` faz?",
+    "alternativas": [
+      "A) Importa todas as funções do módulo math.",
+      "B) importa apenas o valor da constante pi do módulo math.",
+      "C) Cria uma função chamada pi.",
+      "D) Cria uma variável pi com valor indefinido."
     ],
     "resposta": "B"
   },
   {
-    "pergunta": "Qual a sintaxe correta para importar apenas `sqrt` do módulo `math`?",
+    "pergunta": "Qual é a utilidade do `**kwargs` em uma função?",
     "alternativas": [
-      "A) import math.sqrt",
-      "B) from math import sqrt",
-      "C) include math.sqrt",
-      "D) using math import sqrt"
-    ],
-    "resposta": "B"
-  },
-  {
-    "pergunta": "O que `*args` faz numa definição de função?",
-    "alternativas": [
-      "A) Argumentos nomeados",
-      "B) Lista de tuplas",
-      "C) Recebe quantidade variável de argumentos posicionais",
-      "D) Recebe um dicionário"
+      "A) Receber argumentos posicionais em forma de lista.",
+      "B) Declarar variáveis locais dentro da função.",
+      "C) Aceitar vários argumentos nomeados em forma de dicionário.",
+      "D) Importar funções de outros módulos dinamicamente."
     ],
     "resposta": "C"
   }
