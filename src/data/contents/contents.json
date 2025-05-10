@@ -15,5 +15,12 @@
         "descricao_modulo_2" : "Estude o modelo de Von Neumann, que descreve a estrutura e funcionamento básico de um computador.",
         "descricao_modulo_3" : "Explore o papel do sistema operacional em gerenciar os recursos do hardware, como CPU, memória e dispositivos periféricos.",
         "descricao_modulo_4" : "Estude como a virtualização permite rodar múltiplos sistemas operacionais e aplicações em um único hardware físico."
+    },
+    {
+        "id_trilha": 3,
+        "descricao_modulo_1" : "Explore os componentes essenciais de um computador, sua arquitetura e como eles interagem.",
+        "descricao_modulo_2" : "Estude o modelo de Von Neumann, que descreve a estrutura e funcionamento básico de um computador.",
+        "descricao_modulo_3" : "Explore o papel do sistema operacional em gerenciar os recursos do hardware, como CPU, memória e dispositivos periféricos.",
+        "descricao_modulo_4" : "Estude como a virtualização permite rodar múltiplos sistemas operacionais e aplicações em um único hardware físico."
     }
 ]

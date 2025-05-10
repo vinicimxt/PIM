@@ -93,6 +93,30 @@
                     100.0
                 ]
             }
+        },
+        {
+            "id": 6,
+            "nome": "vinicius",
+            "login": "a",
+            "senha": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+            "idade": 24,
+            "trilha_atual": 1,
+            "modulos_concluidos": {},
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {}
+        },
+        {
+            "id": 7,
+            "nome": "kkk",
+            "login": "kk",
+            "senha": "ad370ed99b189921e7fe26057c40aab9f4fee8385e47606f50f348b9a5530af0",
+            "idade": 23,
+            "trilha_atual": 1,
+            "modulos_concluidos": {},
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {}
         }
     ]
 }

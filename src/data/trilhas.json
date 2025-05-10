@@ -8,5 +8,10 @@
     "id_trilha": 2,
     "nome": "Fundamentos de Infraestrutura Computacional",
     "modules": "modules/fundamentos_de_infraestrutura_computacional.json"
+  },
+  {
+    "id_trilha": 3,
+    "nome": "Fundamentos de Tecnologia da Informação e da comunicação",
+    "modules": "modules/fundamentos_de_TIC.json"
   }
 ]

@@ -75,7 +75,7 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
             break
         else:
             print("⚠️ Opção inválida.")
-
+            
 def menu_trilhas(aluno):
     trilhas = carregar_trilhas()
     
@@ -101,11 +101,11 @@ def menu_trilhas(aluno):
         trilha_snake = snake_case(trilha['nome'])
         modulos = carregar_modulos(trilha_snake)
 
-    while True:
+        while True:
             print(f"\n--- {trilha['nome']} ---")
             concluido = aluno.get('modulos_concluidos', {}).get(str(id_trilha), [])
             modulos_ordenados = sorted(modulos, key=lambda x: x['id_modulo'])
-            
+
             for m in modulos_ordenados:
                 status = "✅" if m['id_modulo'] in concluido else "🔒"
                 print(f"{m['id_modulo']}. {m['nome']} {status}")
@@ -119,16 +119,20 @@ def menu_trilhas(aluno):
                 modulo = next((x for x in modulos_ordenados if x['id_modulo'] == mid), None)
 
                 if modulo:
-                    # Verificação de bloqueio
+                    
                     index_modulo = modulos_ordenados.index(modulo)
                     if index_modulo > 0:
                         id_modulo_anterior = modulos_ordenados[index_modulo - 1]['id_modulo']
                         if id_modulo_anterior not in concluido:
                             print("🚫 Você precisa concluir o módulo anterior para acessar este.")
                             continue
-
+                        
                     menu_modulo(aluno, trilha['nome'], id_trilha, modulo)
                 else:
                     print("⚠️ Módulo inválido.")
             else:
                 print("⚠️ Opção inválida.")
+
+                    
+                    
+
