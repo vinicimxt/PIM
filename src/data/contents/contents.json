@@ -18,9 +18,9 @@
     },
     {
         "id_trilha": 3,
-        "descricao_modulo_1" : "Explore os componentes essenciais de um computador, sua arquitetura e como eles interagem.",
-        "descricao_modulo_2" : "Estude o modelo de Von Neumann, que descreve a estrutura e funcionamento básico de um computador.",
-        "descricao_modulo_3" : "Explore o papel do sistema operacional em gerenciar os recursos do hardware, como CPU, memória e dispositivos periféricos.",
-        "descricao_modulo_4" : "Estude como a virtualização permite rodar múltiplos sistemas operacionais e aplicações em um único hardware físico."
+        "descricao_modulo_1": "Entenda o conceito de TIC, sua evolução histórica e seu papel fundamental no mundo moderno interconectado.",
+        "descricao_modulo_2": "Aprenda como as redes de computadores funcionam, incluindo LAN, WAN e os protocolos que estruturam a internet.",
+        "descricao_modulo_3": "Explore como os sistemas ERP, SCM e CRM são utilizados para integrar áreas da empresa, otimizar processos e melhorar o relacionamento com clientes e fornecedores.",
+        "descricao_modulo_4": "Compreenda os riscos de segurança digital e aprenda práticas essenciais para proteger dados e garantir a privacidade online."
     }
 ]

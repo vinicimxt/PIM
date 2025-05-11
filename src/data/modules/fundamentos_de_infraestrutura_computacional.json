@@ -12,7 +12,7 @@
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_1_content.json",
     "questoes": "questions/fundamentos_de_infraestrutura_computacional_module1_questions.json",
-    "link" : "/assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_1.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_1.pdf"
   },
   {
     "id_trilha": 2,
@@ -27,7 +27,7 @@
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_2_content.json",
     "questoes": "questions/fundamentos_de_infraestrutura_computacional_module2_questions.json",
-    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_2.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_2.pdf"
   },
   {
     "id_trilha": 2,
@@ -42,7 +42,7 @@
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_3_content.json",
     "questoes": "questions/fundamentos_de_infraestrutura_computacional_module3_questions.json",
-    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_3.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_3.pdf"
   },
   {
     "id_trilha": 2,
@@ -57,6 +57,6 @@
     ],
     "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_4_content.json",
     "questoes": "questions/fundamentos_de_infraestrutura_computacional_module4_questions.json",
-    "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_4.pdf"
+    "link" : "../../assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_4.pdf"
   }
 ]

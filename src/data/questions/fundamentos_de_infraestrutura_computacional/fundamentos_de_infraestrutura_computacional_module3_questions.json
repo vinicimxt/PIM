@@ -1,22 +1,22 @@
 [
   {
-    "pergunta": "Qual é a principal função de um sistema operacional?",
+    "pergunta": "Qual é uma das funções principais de um sistema operacional?",
     "alternativas": [
-      "A) Gerenciar a execução de programas e alocar recursos",
-      "B) Controlar a comunicação de dados entre redes",
-      "C) Definir como a CPU processa os dados",
-      "D) Monitorar a segurança física do computador"
+      "A) Executar apenas programas gráficos",
+      "B) Armazenar arquivos permanentemente",
+      "C) Gerenciar recursos como CPU, memória e dispositivos",
+      "D) Criar redes de computadores"
     ],
-    "resposta": "A"
+    "resposta": "C"
   },
   {
-    "pergunta": "O que é uma thread?",
+    "pergunta": "O que é um processo dentro de um sistema operacional?",
     "alternativas": [
-      "A) Uma unidade de processamento que executa uma tarefa",
-      "B) Um tipo de dispositivo de entrada do sistema operacional",
-      "C) Um processo em execução dentro de um sistema operacional",
-      "D) A memória onde os dados temporários são armazenados"
+      "A) Um componente físico do computador",
+      "B) Uma unidade de memória usada para armazenar dados",
+      "C) Um programa em execução",
+      "D) Uma interface gráfica do usuário"
     ],
-    "resposta": "A"
+    "resposta": "C"
   }
 ]

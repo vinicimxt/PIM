@@ -1,22 +1,22 @@
 [
   {
-    "pergunta": "Qual componente é responsável por processar as instruções de um computador?",
+    "pergunta": "Qual é a função da placa-mãe em um computador?",
     "alternativas": [
-      "A) Memória RAM",
-      "B) CPU",
-      "C) Disco rígido",
-      "D) Placa-mãe"
+      "A) Armazenar permanentemente os dados do usuário",
+      "B) Executar operações lógicas e aritméticas",
+      "C) Conectar e permitir a comunicação entre os componentes do computador",
+      "D) Exibir imagens para o usuário"
     ],
-    "resposta": "B"
+    "resposta": "C"
   },
   {
-    "pergunta": "O que caracteriza a memória RAM?",
+    "pergunta": "Qual tipo de memória armazena instruções permanentes utilizadas no processo de inicialização do sistema?",
     "alternativas": [
-      "A) Memória volátil usada para armazenar dados temporários",
-      "B) Memória permanente para armazenar dados do sistema operacional",
-      "C) Memória usada para carregar o sistema operacional inicial",
-      "D) Memória usada para armazenar dados em grande volume"
+      "A) Cache",
+      "B) RAM",
+      "C) SSD",
+      "D) ROM"
     ],
-    "resposta": "A"
+    "resposta": "D"
   }
 ]

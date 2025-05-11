@@ -1,62 +1,62 @@
 [
-    {
-      "id_trilha": 3,
-      "id_modulo": 1,
-      "nome": "Introdução ao Hardware de Computadores",
-      "objetivo": "Compreender os principais componentes do hardware de um computador e sua função no sistema.",
-      "topicos": [
-        "Componentes principais de um computador (CPU, memória, dispositivos de entrada e saída)",
-        "Tipos de memória: RAM, ROM, Cache",
-        "Placas-mãe e barramentos",
-        "Fontes de alimentação e periféricos"
-      ],
-      "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_1_content.json",
-      "questoes": "questions/fundamentos_de_infraestrutura_computacional_module1_questions.json",
-      "link" : "/assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_1.pdf"
-    },
-    {
-      "id_trilha": 3,
-      "id_modulo": 2,
-      "nome": "Modelo de Von Neumann",
-      "objetivo": "Entender o modelo de arquitetura de computadores proposto por John Von Neumann.",
-      "topicos": [
-        "Princípios do Modelo de Von Neumann",
-        "Unidade Central de Processamento (CPU): ALU, Unidade de Controle, Registradores",
-        "Memória e armazenamento no Modelo de Von Neumann",
-        "Como o modelo de Von Neumann influencia a arquitetura moderna de computadores"
-      ],
-      "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_2_content.json",
-      "questoes": "questions/fundamentos_de_infraestrutura_computacional_module2_questions.json",
-      "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_2.pdf"
-    },
-    {
-      "id_trilha": 3,
-      "id_modulo": 3,
-      "nome": "Sistemas Operacionais: Funções e Gerenciamento",
-      "objetivo": "Compreender as funções básicas de um sistema operacional e como ele gerencia recursos do computador.",
-      "topicos": [
-        "Funções principais de um sistema operacional",
-        "Gerenciamento de processos e threads",
-        "Gerenciamento de memória",
-        "Sistema de arquivos e controle de entrada/saída (E/S)"
-      ],
-      "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_3_content.json",
-      "questoes": "questions/fundamentos_de_infraestrutura_computacional_module3_questions.json",
-      "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_3.pdf"
-    },
-    {
-      "id_trilha": 3,
-      "id_modulo": 4,
-      "nome": "Virtualização de Recursos Computacionais",
-      "objetivo": "Compreender os conceitos de virtualização e como ela otimiza o uso dos recursos computacionais.",
-      "topicos": [
-        "O que é virtualização e seus benefícios",
-        "Máquinas virtuais e hipervisores",
-        "Tipos de virtualização: completa, paravirtualização, e virtualização de hardware",
-        "Virtualização em servidores e ambientes de nuvem"
-      ],
-      "conteudo": "contents/fundamentos_de_infraestrutura_computacional/module_4_content.json",
-      "questoes": "questions/fundamentos_de_infraestrutura_computacional_module4_questions.json",
-      "link" : "assets/pdf/fundamentos_de_infraestrutura_computacional/infraestrutura_computacional_modulo_4.pdf"
-    }
-  ]
+  {
+    "id_trilha": 3,
+    "id_modulo": 1,
+    "nome": "Conceito e Importância das TICs",
+    "objetivo": "Compreender o que são as TICs, suas funções e seu papel na transformação digital da sociedade.",
+    "topicos": [
+      "O que são TICs?",
+      "Evolução das TICs",
+      "Importância na Sociedade Atual",
+      "Benefícios das TICs"
+    ],
+    "conteudo": "contents/fundamentos_de_tic/module_1_content.json",
+    "questoes": "questions/fundamentos_de_tic_module1_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_tic/tecnologia_da_informacao_modulo_1.pdf"
+  },
+  {
+    "id_trilha": 3,
+    "id_modulo": 2,
+    "nome": "Redes de Comunicação e Internet",
+    "objetivo": "Entender como funcionam as redes de computadores, a internet e os protocolos que permitem a comunicação digital.",
+    "topicos": [
+      "O que são Redes de Comunicação?",
+      "A Internet",
+      "Segurança em Redes",
+      "Internet, Intranet e Extranet"
+    ],
+    "conteudo": "contents/fundamentos_de_tic/module_2_content.json",
+    "questoes": "questions/fundamentos_de_tic_module2_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_tic/tecnologia_da_informacao_modulo_2.pdf"
+  },
+  {
+    "id_trilha": 3,
+    "id_modulo": 3,
+    "nome": "Sistemas de Informação nas Organizações (ERP, SCM e CRM)",
+    "objetivo": "Explorar como os sistemas ERP, SCM e CRM são utilizados para integrar áreas da empresa, otimizar processos e melhorar o relacionamento com clientes e fornecedores.",
+    "topicos": [
+      "O que são Sistemas de Informação?",
+      "ERP – Enterprise Resource Planning (Planejamento de Recursos Empresariais)",
+      "SCM – Supply Chain Management (Gestão da Cadeia de Suprimentos)",
+      "CRM – Customer Relationship Management (Gestão do Relacionamento com o Cliente)"
+    ],
+    "conteudo": "contents/fundamentos_de_tic/module_3_content.json",
+    "questoes": "questions/fundamentos_de_tic_module3_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_tic/tecnologia_da_informacao_modulo_3.pdf"
+  },
+  {
+    "id_trilha": 3,
+    "id_modulo": 4,
+    "nome": "Fundamentos de Banco de Dados",
+    "objetivo": "Compreender os conceitos fundamentais de banco de dados, sua estrutura, funcionamento e importância para o armazenamento e recuperação de informações nas organizações.",
+    "topicos": [
+      "O que é um Banco de Dados?",
+      "Componentes de um Banco de Dados",
+      "Sistemas de Gerenciamento de Banco de Dados (SGBD)",
+      "Tipos de Banco de Dados / Importância nas Organizações"
+    ],
+    "conteudo": "contents/fundamentos_de_tic/module_4_content.json",
+    "questoes": "questions/fundamentos_de_tic_module4_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_tic/tecnologia_da_informacao_modulo_4.pdf"
+  }
+]

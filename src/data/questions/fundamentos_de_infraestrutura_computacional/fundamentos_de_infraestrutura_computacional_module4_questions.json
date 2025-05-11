@@ -1,22 +1,22 @@
 [
   {
-    "pergunta": "O que é uma máquina virtual?",
+    "pergunta": "Qual é a principal função de um hipervisor em um ambiente virtualizado?",
     "alternativas": [
-      "A) Um servidor físico usado para executar software",
-      "B) Um sistema operacional que opera diretamente sobre o hardware",
-      "C) Um ambiente isolado que simula um computador físico",
-      "D) Um software que simula redes de computadores"
+      "A) Criar backups automáticos do sistema",
+      "B) Fornecer acesso à internet para as máquinas físicas",
+      "C) Gerenciar e executar máquinas virtuais",
+      "D) Armazenar arquivos temporários do sistema"
     ],
     "resposta": "C"
   },
   {
-    "pergunta": "Qual é a função de um hipervisor?",
+    "pergunta": "Qual é uma vantagem direta da virtualização em servidores?",
     "alternativas": [
-      "A) Controlar a execução de múltiplas máquinas virtuais",
-      "B) Gerenciar o tráfego de rede em uma máquina virtual",
-      "C) Monitorar a temperatura do servidor físico",
-      "D) Armazenar dados nas máquinas virtuais"
+      "A) Redução da capacidade de processamento",
+      "B) Maior consumo de energia elétrica",
+      "C) Melhor aproveitamento de recursos físicos",
+      "D) Menor controle sobre o ambiente de rede"
     ],
-    "resposta": "A"
+    "resposta": "C"
   }
 ]

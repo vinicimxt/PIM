@@ -82,13 +82,19 @@
             "modulos_concluidos": {
                 "1": [
                     1,
-                    2
+                    2,
+                    1,
+                    1,
+                    1
                 ]
             },
             "projetos_concluidos": [],
             "desafios_concluidos": [],
             "notas": {
                 "1": [
+                    100.0,
+                    100.0,
+                    100.0,
                     100.0,
                     100.0
                 ]
@@ -112,6 +118,30 @@
             "login": "kk",
             "senha": "ad370ed99b189921e7fe26057c40aab9f4fee8385e47606f50f348b9a5530af0",
             "idade": 23,
+            "trilha_atual": 1,
+            "modulos_concluidos": {},
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {}
+        },
+        {
+            "id": 8,
+            "nome": "vc",
+            "login": "vc",
+            "senha": "522a45442726c9f9ddc6cdd60b3b627c4a34268a2a30910475a7347cfe32900d",
+            "idade": 23,
+            "trilha_atual": 1,
+            "modulos_concluidos": {},
+            "projetos_concluidos": [],
+            "desafios_concluidos": [],
+            "notas": {}
+        },
+        {
+            "id": 9,
+            "nome": "vik",
+            "login": "vike",
+            "senha": "3538a97e6b1f33c1dff9e0ebfa5de408e86f5cc07ffae5defc5766ed98513ad2",
+            "idade": 323,
             "trilha_atual": 1,
             "modulos_concluidos": {},
             "projetos_concluidos": [],

@@ -1,22 +1,22 @@
 [
-    {
-      "pergunta": "Qual é a principal característica do modelo de Von Neumann?",
-      "alternativas": [
-        "A) A CPU e a memória compartilham o mesmo espaço de endereçamento",
-        "B) O computador usa múltiplas unidades de processamento",
-        "C) A memória é separada em blocos de leitura e escrita",
-        "D) A CPU processa os dados sem interação com a memória"
-      ],
-      "resposta": "A"
-    },
-    {
-      "pergunta": "No Modelo de Von Neumann, qual é a função da ALU (Unidade Lógica e Aritmética)?",
-      "alternativas": [
-        "A) Controlar a comunicação entre a memória e os periféricos",
-        "B) Executar operações matemáticas e lógicas",
-        "C) Armazenar temporariamente os dados",
-        "D) Gerenciar a execução dos programas"
-      ],
-      "resposta": "B"
-    }
-  ]
+  {
+    "pergunta": "Qual é a principal característica de uma Intranet?",
+    "alternativas": [
+      "A) É uma rede pública acessível mundialmente",
+      "B) Permite acesso irrestrito a qualquer usuário externo",
+      "C) É uma rede interna usada exclusivamente por membros de uma organização",
+      "D) Conecta diferentes empresas em um mesmo ambiente colaborativo"
+    ],
+    "resposta": "C"
+  },
+  {
+    "pergunta": "Qual é a função principal da Extranet em uma empresa?",
+    "alternativas": [
+      "A) Proteger os sistemas internos contra ataques externos",
+      "B) Facilitar a comunicação interna entre os departamentos",
+      "C) Fornecer acesso limitado da rede corporativa a parceiros e fornecedores externos",
+      "D) Oferecer um navegador personalizado para os funcionários"
+    ],
+    "resposta": "C"
+  }
+]

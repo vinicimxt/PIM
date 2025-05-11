@@ -26,6 +26,12 @@ def carregar_modulos(trilha_nome_snake):
     path = os.path.join(DATA_DIR, 'modules', f"{trilha_nome_snake}.json")
     return carregar_json(path)
 
+def carregar_modulos_por_caminho(caminho_relativo):
+    path = os.path.join(DATA_DIR, caminho_relativo)
+    return carregar_json(path)
+
+
+
 def carregar_conteudo( ):
     path = os.path.join(DATA_DIR, 'contents', "contents.json")
     return carregar_json(path)

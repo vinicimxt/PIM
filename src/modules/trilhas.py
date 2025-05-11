@@ -1,4 +1,4 @@
-from modules.utils import carregar_json, TRILHAS_FILE, carregar_modulos, carregar_conteudo, carregar_questoes, snake_case, abrir_link
+from modules.utils import carregar_json, TRILHAS_FILE,carregar_modulos_por_caminho, carregar_conteudo, carregar_questoes, snake_case, abrir_link
 from modules.usuario import carregar_dados_usuario, salvar_dados_usuario
 import os
 
@@ -9,6 +9,7 @@ def carregar_trilhas():
     return carregar_json(TRILHAS_FILE)
 
 def fazer_quiz(aluno, questoes, id_trilha, id_modulo):
+    print(id_modulo)
     if not questoes:
         print("\n⚠️  Este módulo não possui questionário.")
         return
@@ -45,6 +46,7 @@ def fazer_quiz(aluno, questoes, id_trilha, id_modulo):
     salvar_dados_usuario(dados)
 
 def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
+   
     trilha_snake = snake_case(trilha_nome)
     conteudo_lista = carregar_conteudo()
     
@@ -54,6 +56,7 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
             chave = f"descricao_modulo_{modulo['id_modulo']}"
             descricao = trilha_conteudo.get(chave, descricao)
             break
+    
     
     questoes = carregar_questoes(trilha_snake, modulo['id_modulo'])
 
@@ -75,6 +78,7 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
             break
         else:
             print("⚠️ Opção inválida.")
+
             
 def menu_trilhas(aluno):
     trilhas = carregar_trilhas()
@@ -98,8 +102,8 @@ def menu_trilhas(aluno):
             print("⚠️ Trilha inválida.")
             continue
 
-        trilha_snake = snake_case(trilha['nome'])
-        modulos = carregar_modulos(trilha_snake)
+        modulos = carregar_modulos_por_caminho(trilha['modules'])
+
 
         while True:
             print(f"\n--- {trilha['nome']} ---")

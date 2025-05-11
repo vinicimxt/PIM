@@ -1,22 +1,22 @@
 [
-    {
-      "pergunta": "Qual é a principal característica do modelo de Von Neumann?",
-      "alternativas": [
-        "A) A CPU e a memória compartilham o mesmo espaço de endereçamento",
-        "B) O computador usa múltiplas unidades de processamento",
-        "C) A memória é separada em blocos de leitura e escrita",
-        "D) A CPU processa os dados sem interação com a memória"
-      ],
-      "resposta": "A"
-    },
-    {
-      "pergunta": "No Modelo de Von Neumann, qual é a função da ALU (Unidade Lógica e Aritmética)?",
-      "alternativas": [
-        "A) Controlar a comunicação entre a memória e os periféricos",
-        "B) Executar operações matemáticas e lógicas",
-        "C) Armazenar temporariamente os dados",
-        "D) Gerenciar a execução dos programas"
-      ],
-      "resposta": "B"
-    }
-  ]
+  {
+    "pergunta": "Qual é a principal função de um sistema ERP (Enterprise Resource Planning)?",
+    "alternativas": [
+      "A) Gerenciar o relacionamento com os clientes",
+      "B) Integrar os processos de negócios em um único sistema",
+      "C) Controlar o fluxo de mercadorias na cadeia de suprimentos",
+      "D) Monitorar atividades nas redes sociais da empresa"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "O que um sistema CRM (Customer Relationship Management) busca otimizar?",
+    "alternativas": [
+      "A) A produção industrial",
+      "B) O gerenciamento do estoque",
+      "C) O relacionamento e a fidelização de clientes",
+      "D) O controle de folha de pagamento"
+    ],
+    "resposta": "C"
+  }
+]

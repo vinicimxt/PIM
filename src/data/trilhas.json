@@ -11,7 +11,7 @@
   },
   {
     "id_trilha": 3,
-    "nome": "Fundamentos de Tecnologia da Informação e da comunicação",
-    "modules": "modules/fundamentos_de_TIC.json"
+    "nome": "Fundamentos de TIC",
+    "modules": "modules/fundamentos_de_tic.json"
   }
 ]
