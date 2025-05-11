@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual é a principal característica de uma função matemática?",
+    "alternativas": [
+      "A) Cada entrada está associada a exatamente uma saída",
+      "B) Cada entrada está associada a múltiplas saídas possíveis",
+      "C) Toda função precisa conter números negativos",
+      "D) Toda função precisa ser representada graficamente"
+    ],
+    "resposta": "A"
+  },
+  {
+    "pergunta": "Em qual situação abaixo uma função matemática pode ser aplicada em sistemas computacionais?",
+    "alternativas": [
+      "A) Para armazenar imagens em banco de dados",
+      "B) Para criptografar textos de forma aleatória",
+      "C) Para calcular rotas em aplicativos de mapas com base em distância e tempo",
+      "D) Para desenhar interfaces gráficas automaticamente"
+    ],
+    "resposta": "C"
+  }
+]

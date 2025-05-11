@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "O que são expressões algébricas no contexto da matemática aplicada à computação?",
+    "alternativas": [
+      "A) Fórmulas usadas apenas para criptografia de dados",
+      "B) Conjuntos de símbolos e números que representam relações matemáticas",
+      "C) Números binários usados em algoritmos de rede",
+      "D) Somente equações resolvidas por linguagens de programação"
+    ],
+    "resposta": "B"
+  },
+  {
+    "pergunta": "Qual das alternativas abaixo é um exemplo de aplicação de funções matemáticas em sistemas?",
+    "alternativas": [
+      "A) Estilização de interfaces de usuário",
+      "B) Criação de logos vetoriais",
+      "C) Cálculo automático de juros e estatísticas de uso",
+      "D) Edição de fotos em sistemas gráficos"
+    ],
+    "resposta": "C"
+  }
+]

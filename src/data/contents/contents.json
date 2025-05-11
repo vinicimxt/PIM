@@ -22,5 +22,12 @@
         "descricao_modulo_2": "Aprenda como as redes de computadores funcionam, incluindo LAN, WAN e os protocolos que estruturam a internet.",
         "descricao_modulo_3": "Explore como os sistemas ERP, SCM e CRM são utilizados para integrar áreas da empresa, otimizar processos e melhorar o relacionamento com clientes e fornecedores.",
         "descricao_modulo_4": "Compreenda os riscos de segurança digital e aprenda práticas essenciais para proteger dados e garantir a privacidade online."
+    },
+    {
+        "id_trilha": 4,
+        "descricao_modulo_1": "Compreenda os fundamentos da lógica matemática e seu papel na construção de algoritmos e estruturas de decisão.",
+        "descricao_modulo_2": "Explore os conceitos de álgebra e análise de funções aplicados à modelagem e resolução de problemas computacionais.",
+        "descricao_modulo_3": "Aprenda os fundamentos da estatística descritiva para organizar, resumir e interpretar dados em sistemas de informação."
     }
+
 ]

@@ -1,0 +1,47 @@
+[
+  {
+    "id_trilha": 4,
+    "id_modulo": 1,
+    "nome": "Lógica Matemática",
+    "objetivo": "Compreender os fundamentos da lógica matemática e seu papel na construção de algoritmos e estruturas de decisão em sistemas computacionais.",
+    "topicos": [
+      "O que é lógica matemática?",
+      "Proposições,Operadores Lógicos,Tabelas-Verdade",
+      "Equivalências Lógicas",
+      "Aplicação prática na computação"
+    ],
+    "conteudo": "contents/fundamentos_de_math/module_1_content.json",
+    "questoes": "questions/fundamentos_de_math_module1_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_math/matematica_estatistica_modulo_1.pdf"
+  },
+  {
+    "id_trilha": 4,
+    "id_modulo": 2,
+    "nome": "Álgebra e Funções Aplicadas à Computação",
+    "objetivo": "Explorar os conceitos de álgebra e análise de funções aplicados à modelagem e resolução de problemas computacionais.",
+    "topicos": [
+      "Expressões Algébricas",
+      "Equações e Inequações",
+      "Funções Matemáticas",
+      "Representações Gráficas"
+    ],
+    "conteudo": "contents/fundamentos_de_math/module_2_content.json",
+    "questoes": "questions/fundamentos_de_math_module2_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_math/matematica_estatistica_modulo_2.pdf"
+  },
+  {
+    "id_trilha": 4,
+    "id_modulo": 3,
+    "nome": "Estatística Descritiva",
+    "objetivo": "Ver como eles ajudam na interpretação e análise de dados em projetos de software e sistemas.",
+    "topicos": [
+      "Conceito de Estatística Descritiva",
+      "Medidas de Tendência Central",
+      "Medidas de Dispersão,Distribuição de Frequência",
+      "Visualização de Dados"
+    ],
+    "conteudo": "contents/fundamentos_de_math/module_3_content.json",
+    "questoes": "questions/fundamentos_de_math_module3_questions.json",
+    "link" : "../../assets/pdf/fundamentos_de_math/matematica_estatistica_modulo_3.pdf"
+  }
+]

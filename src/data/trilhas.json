@@ -13,5 +13,10 @@
     "id_trilha": 3,
     "nome": "Fundamentos de TIC",
     "modules": "modules/fundamentos_de_tic.json"
+  },
+    {
+    "id_trilha": 4,
+    "nome": "Fundamentos de Matematica e Estatistica",
+    "modules": "modules/fundamentos_de_math.json"
   }
 ]

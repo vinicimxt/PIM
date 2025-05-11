@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual das alternativas representa uma medida de tendência central utilizada na estatística descritiva?",
+    "alternativas": [
+      "A) Variância",
+      "B) Boxplot",
+      "C) Amplitude",
+      "D) Moda"
+    ],
+    "resposta": "D"
+  },
+  {
+    "pergunta": "O que o desvio padrão indica em um conjunto de dados?",
+    "alternativas": [
+      "A) A média exata dos valores",
+      "B) O valor mais comum no conjunto",
+      "C) A diferença entre os dois maiores valores",
+      "D) O quanto os dados se afastam da média"
+    ],
+    "resposta": "D"
+  }
+]

@@ -50,6 +50,8 @@ def menu_modulo(aluno, trilha_nome, id_trilha, modulo):
     trilha_snake = snake_case(trilha_nome)
     conteudo_lista = carregar_conteudo()
     
+    print(trilha_snake)
+    
     descricao = "Sem descrição disponível."
     for trilha_conteudo in conteudo_lista:
         if trilha_conteudo.get("id_trilha") == id_trilha:
